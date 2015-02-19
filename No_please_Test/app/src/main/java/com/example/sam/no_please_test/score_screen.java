@@ -1,29 +1,27 @@
 package com.example.sam.no_please_test;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
-import android.widget.EditText;
+import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    public final static String EXTRA_MESSAGE = "com.example.sam.no_please_test.MESSAGE";
+public class score_screen extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Intent intent = getIntent();
+        setContentView(R.layout.activity_score_screen);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_score_screen, menu);
         return true;
     }
 
@@ -42,17 +40,10 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*Called to go to options (isn't working yet) */
-    public void go_to_options(View view){
+    /*should go to game screen activity*/
+    public void MainActivity(View view){
         //do something in response to button
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    /*should go to player select activity*/
-    public void Player_Select(View view){
-        //do something in response to button
-        Intent intent = new Intent(this, Player_Select.class);
-        startActivity(intent);
-    }
-
 }

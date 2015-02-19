@@ -24,6 +24,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sam.no_please_test.MainActivity" />
         </activity>
+        <activity
+            android:name=".Player_Select"
+            android:label="@string/title_activity_player__select"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sam.no_please_test.MainActivity" />
+        </activity>
+        <activity
+            android:name=".go_to_game"
+            android:label="@string/title_activity_go_to_game"
+            android:parentActivityName=".Player_Select" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sam.no_please_test.Player_Select" />
+        </activity>
+        <activity
+            android:name=".score_screen"
+            android:label="@string/title_activity_score_screen"
+            android:parentActivityName=".go_to_game" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sam.no_please_test.go_to_game" />
+        </activity>
     </application>
 
 </manifest>

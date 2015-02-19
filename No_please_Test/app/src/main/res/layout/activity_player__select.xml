@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sam.no_please_test.Player_Select">
+
+    <TextView
+        android:text="@string/Pass_and_play_player_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkbox_Player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_1_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_2_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_3_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_4_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_5_Select"
+        android:onClick="onCheckboxClicked"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_go_to_game"
+        android:onClick="go_to_game"/>
+
+
+</LinearLayout>
