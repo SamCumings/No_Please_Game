@@ -6,9 +6,9 @@
     <string name="action_settings">Settings</string>
     <string name="Tutorial">tutorial</string>
     <string name="main_menu">main menu</string>
-    <string name="edit_message">Enter a Message Bitch!</string>
+    <string name="edit_message">Enter a Message Nice Person</string>
     <string name="Player_Select">Select players for Pass and Play</string>
-    <string name="Options">Options (not working yet)</string>
+    <string name="Options">Options ignore</string>
     <string name="Pass_and_play_player_select">Pass and Play Player Select</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
