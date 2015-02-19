@@ -41,7 +41,7 @@ public class score_screen extends ActionBarActivity {
     }
 
     /*should go to game screen activity*/
-    public void MainActivity(View view){
+    public void activity_main(View view){
         //do something in response to button
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

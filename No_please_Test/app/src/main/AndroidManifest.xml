@@ -48,6 +48,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sam.no_please_test.go_to_game" />
         </activity>
+        <activity
+            android:name=".Tutorial"
+            android:label="@string/title_activity_tutorial"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sam.no_please_test.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

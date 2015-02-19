@@ -3,10 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sam.no_please_test.score_screen">
+    tools:context="com.example.sam.no_please_test.Tutorial">
 
-    <TextView
-        android:text="@string/hello_world"
+    <TextView android:text="@string/Tutorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -14,6 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_menu"
-        android:onClick="activity_main"/>
+        android:onClick="back_to_main_menu"/>
 
 </LinearLayout>
