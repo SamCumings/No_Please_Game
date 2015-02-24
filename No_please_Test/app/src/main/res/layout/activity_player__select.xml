@@ -79,6 +79,37 @@
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/Player1_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_1_Name" />
+    <EditText
+        android:id="@+id/Player2_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_2_Name" />
+    <EditText
+        android:id="@+id/Player3_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_3_Name" />
+    <EditText
+        android:id="@+id/Player4_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_4_Name" />
+    <EditText
+        android:id="@+id/Player5_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_5_Name" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"

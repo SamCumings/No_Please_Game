@@ -117,16 +117,62 @@ public class Player_Select extends ActionBarActivity {
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radio_three_players:
-                if (checked)
-                    number_players=3;
+                if (checked) {
+                    number_players = 3;
+
+                    View player1 = findViewById(R.id.Player1_Name);
+                    player1.setVisibility(View.VISIBLE);
+
+                    View player2 = findViewById(R.id.Player2_Name);
+                    player2.setVisibility(View.VISIBLE);
+
+                    View player3 = findViewById(R.id.Player3_Name);
+                    player3.setVisibility(View.VISIBLE);
+
+                    View player4 = findViewById(R.id.Player4_Name);
+                    player4.setVisibility(View.INVISIBLE);
+
+                    View player5 = findViewById(R.id.Player5_Name);
+                    player5.setVisibility(View.INVISIBLE);
+                }
                     break;
             case R.id.radio_four_players:
-                if (checked)
-                    number_players=4;
+                if (checked) {
+                    number_players = 4;
+                    View player1 = findViewById(R.id.Player1_Name);
+                    player1.setVisibility(View.VISIBLE);
+
+                    View player2 = findViewById(R.id.Player2_Name);
+                    player2.setVisibility(View.VISIBLE);
+
+                    View player3 = findViewById(R.id.Player3_Name);
+                    player3.setVisibility(View.VISIBLE);
+
+                    View player4 = findViewById(R.id.Player4_Name);
+                    player4.setVisibility(View.VISIBLE);
+
+                    View player5 = findViewById(R.id.Player5_Name);
+                    player5.setVisibility(View.INVISIBLE);
+                }
                     break;
             case R.id.radio_five_players:
-                if (checked)
-                    number_players=5;
+                if (checked) {
+                    number_players = 5;
+                    View player1 = findViewById(R.id.Player1_Name);
+                    player1.setVisibility(View.VISIBLE);
+
+                    View player2 = findViewById(R.id.Player2_Name);
+                    player2.setVisibility(View.VISIBLE);
+
+                    View player3 = findViewById(R.id.Player3_Name);
+                    player3.setVisibility(View.VISIBLE);
+
+                    View player4 = findViewById(R.id.Player4_Name);
+                    player4.setVisibility(View.VISIBLE);
+
+                    View player5 = findViewById(R.id.Player5_Name);
+                    player5.setVisibility(View.VISIBLE);
+                }
                     break;
         }
     }
