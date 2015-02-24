@@ -13,8 +13,6 @@
 
     <!--
 
-    testing one two three
-
     <CheckBox
         android:id="@+id/checkbox_Player1"
         android:layout_width="wrap_content"

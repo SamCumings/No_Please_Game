@@ -19,6 +19,7 @@ import android.view.View.OnClickListener;
 
 public class Player_Select extends ActionBarActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,6 +105,8 @@ public class Player_Select extends ActionBarActivity {
     spinner.setAdapter(adapter);
     */
 
+    int number_players=0;
+
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -115,15 +118,15 @@ public class Player_Select extends ActionBarActivity {
         switch(view.getId()) {
             case R.id.radio_three_players:
                 if (checked)
-
+                    number_players=3;
                     break;
             case R.id.radio_four_players:
                 if (checked)
-
+                    number_players=4;
                     break;
             case R.id.radio_five_players:
                 if (checked)
-
+                    number_players=5;
                     break;
         }
     }
@@ -132,6 +135,7 @@ public class Player_Select extends ActionBarActivity {
     public void go_to_game(View view){
         //do something in response to button
         Intent intent = new Intent(this, go_to_game.class);
+        intent.putExtra("EXTRA_NUMBER_PLAYERS",number_players);
         startActivity(intent);
     }
 

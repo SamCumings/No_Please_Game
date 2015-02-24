@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class go_to_game extends ActionBarActivity {
@@ -14,7 +15,10 @@ public class go_to_game extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
+        int number_players=intent.getIntExtra("EXTRA_NUMBER_PLAYERS",0);
         setContentView(R.layout.activity_go_to_game);
+        TextView textView = (TextView) this.findViewById(R.id.game_screen_title);
+        textView.setText(String.valueOf(number_players));
     }
 
 
