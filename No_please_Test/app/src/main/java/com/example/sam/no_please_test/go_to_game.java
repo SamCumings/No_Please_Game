@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class go_to_game extends ActionBarActivity {
 
+    //test
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
