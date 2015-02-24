@@ -6,7 +6,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
+import android.view.View.OnClickListener;
 
 
 public class Player_Select extends ActionBarActivity {
@@ -34,6 +42,91 @@ public class Player_Select extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /*
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch(view.getId()) {
+            case R.id.checkbox_Player1:
+                if (checked){
+
+                }
+                else{
+
+                }
+
+                break;
+            case R.id.checkbox_Player2:
+                if (checked){
+
+                }
+                else{
+
+                }
+                break;
+            case R.id.checkbox_Player3:
+                if (checked){
+
+                }
+                else{
+
+                }
+                break;
+            case R.id.checkbox_Player4:
+                if (checked){
+
+                }
+                else{
+
+                }
+                break;
+            case R.id.checkbox_Player5:
+                if (checked){
+
+                }
+                else{
+
+                }
+                break;
+        }
+    }
+    */
+
+    /*
+    Spinner spinner = (Spinner) findViewById(R.id.player_select_spinner);
+    // Create an ArrayAdapter using the string array and a default spinner layout
+    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.player_select_spinner, android.R.layout.simple_spinner_item);
+    // Specify the layout to use when the list of choices appears
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    // Apply the adapter to the spinner
+    spinner.setAdapter(adapter);
+    */
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        View button = findViewById(R.id.button);
+        button.setVisibility(View.VISIBLE);
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_three_players:
+                if (checked)
+
+                    break;
+            case R.id.radio_four_players:
+                if (checked)
+
+                    break;
+            case R.id.radio_five_players:
+                if (checked)
+
+                    break;
+        }
+    }
 
     /*should go to game screen activity*/
     public void go_to_game(View view){

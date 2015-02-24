@@ -1,4 +1,5 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!--
     <CheckBox
         android:id="@+id/checkbox_Player1"
         android:layout_width="wrap_content"
@@ -41,10 +43,47 @@
         android:text="@string/Player_5_Select"
         android:onClick="onCheckboxClicked"/>
 
+    -->
+
+
+    <!--
+    <Spinner
+        android:id="@+id/player_select_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/player_select_spinner"
+        android:prompt="@string/Player_Select"/>
+
+    -->
+
+    <RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_three_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three_players"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_four_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four_players"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_five_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five_players"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_go_to_game"
+        android:visibility="invisible"
         android:onClick="go_to_game"/>
 
 

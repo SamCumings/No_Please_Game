@@ -24,4 +24,14 @@
     <string name="title_activity_score_screen">score_screen</string>
     <string name="title_activity_tutorial">Tutorial</string>
 
+    <string-array name="player_select_spinner">
+        <item>3 players (minimum number)</item>
+        <item>4 players</item>
+        <item>5 players</item>
+    </string-array>
+
+    <string name="three_players">three player game</string>
+    <string name="four_players">four player game</string>
+    <string name="five_players">five player game</string>
+
 </resources>
