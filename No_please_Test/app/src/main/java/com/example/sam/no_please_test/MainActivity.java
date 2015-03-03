@@ -7,8 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.EditText;
-
-
+// this is a test comment by olaf
 
 public class MainActivity extends ActionBarActivity {
 
