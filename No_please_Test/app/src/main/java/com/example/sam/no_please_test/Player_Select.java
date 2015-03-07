@@ -3,14 +3,12 @@ package com.example.sam.no_please_test;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
+
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
+
 import android.widget.RadioButton;
-import android.widget.Spinner;
+
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,70 +41,9 @@ public class Player_Select extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.checkbox_Player1:
-                if (checked){
-
-                }
-                else{
-
-                }
-
-                break;
-            case R.id.checkbox_Player2:
-                if (checked){
-
-                }
-                else{
-
-                }
-                break;
-            case R.id.checkbox_Player3:
-                if (checked){
-
-                }
-                else{
-
-                }
-                break;
-            case R.id.checkbox_Player4:
-                if (checked){
-
-                }
-                else{
-
-                }
-                break;
-            case R.id.checkbox_Player5:
-                if (checked){
-
-                }
-                else{
-
-                }
-                break;
-        }
-    }
-    */
-
-    /*
-    Spinner spinner = (Spinner) findViewById(R.id.player_select_spinner);
-    // Create an ArrayAdapter using the string array and a default spinner layout
-    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.player_select_spinner, android.R.layout.simple_spinner_item);
-    // Specify the layout to use when the list of choices appears
-    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-    // Apply the adapter to the spinner
-    spinner.setAdapter(adapter);
-    */
-
     int number_players=0;
 
+    //does the radio buttons
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -115,6 +52,7 @@ public class Player_Select extends ActionBarActivity {
         button.setVisibility(View.VISIBLE);
 
         // Check which radio button was clicked
+        // reveals the appropriate text fields depending on the players selected. (that's what the invisible vs. visible means)
         switch(view.getId()) {
             case R.id.radio_three_players:
                 if (checked) {
@@ -177,9 +115,10 @@ public class Player_Select extends ActionBarActivity {
         }
     }
 
-    /*should go to game screen activity*/
+    //should go to game screen activity
     public void go_to_game(View view){
-        //do something in response to button
+        //response to button press pass the number of players to game screen. Pass it the Number of players through the put Extra thing.
+        // need to get bundles understood so I can pass more than just one tiny bit of information.
         Intent intent = new Intent(this, go_to_game.class);
         intent.putExtra("EXTRA_NUMBER_PLAYERS",number_players);
         startActivity(intent);

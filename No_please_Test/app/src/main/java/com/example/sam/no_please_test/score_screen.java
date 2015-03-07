@@ -17,7 +17,7 @@ public class score_screen extends ActionBarActivity {
         setContentView(R.layout.activity_score_screen);
     }
 
-
+    //just menu stuff
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -40,7 +40,7 @@ public class score_screen extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*should go to game screen activity*/
+    //should back to the main screen
     public void activity_main(View view){
         //do something in response to button
         Intent intent = new Intent(this, MainActivity.class);

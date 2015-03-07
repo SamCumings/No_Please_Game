@@ -11,52 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!--
-
-    <CheckBox
-        android:id="@+id/checkbox_Player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Player_1_Select"
-        android:onClick="onCheckboxClicked"/>
-    <CheckBox
-        android:id="@+id/checkbox_Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Player_2_Select"
-        android:onClick="onCheckboxClicked"/>
-    <CheckBox
-        android:id="@+id/checkbox_Player3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Player_3_Select"
-        android:onClick="onCheckboxClicked"/>
-    <CheckBox
-        android:id="@+id/checkbox_Player4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Player_4_Select"
-        android:onClick="onCheckboxClicked"/>
-    <CheckBox
-        android:id="@+id/checkbox_Player5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Player_5_Select"
-        android:onClick="onCheckboxClicked"/>
-
-    -->
-
-
-    <!--
-    <Spinner
-        android:id="@+id/player_select_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/player_select_spinner"
-        android:prompt="@string/Player_Select"/>
-
-    -->
-
     <RadioGroup
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"

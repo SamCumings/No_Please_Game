@@ -14,10 +14,12 @@ public class Tutorial extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
+
+        //shows the tutorial
         setContentView(R.layout.activity_tutorial);
     }
 
-
+    //these are relating to the action bar and menus they will need to be addressed later.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -39,7 +41,7 @@ public class Tutorial extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /*should go to game screen activity*/
+    //goes to back to main activity (finish just closes the current activity and goes back to the last one.)
     public void back_to_main_menu(View view) {
         //do something in response to button
         finish();

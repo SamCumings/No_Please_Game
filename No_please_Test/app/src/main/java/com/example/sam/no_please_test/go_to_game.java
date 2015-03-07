@@ -16,11 +16,13 @@ public class go_to_game extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
 
+        //this gets the number of players (doesn't get anything else yet that's what the commented out code is for).
         Bundle bundle = getIntent().getExtras();
 
         int number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
         setContentView(R.layout.activity_go_to_game);
 
+        //displays the number of players
         TextView textView = (TextView) this.findViewById(R.id.game_screen_title);
         textView.setText(String.valueOf(number_players));
 
@@ -53,7 +55,7 @@ public class go_to_game extends ActionBarActivity {
 
     }
 
-
+    //menu stuff
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -76,9 +78,9 @@ public class go_to_game extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*should go to game screen activity*/
+    //should go to score screen activity
     public void score_screen(View view){
-        //do something in response to button
+        //goes to next screen in response to button press
         Intent intent = new Intent(this, score_screen.class);
         startActivity(intent);
     }
