@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sam.no_please_test.Player_Select">
+
+    <TextView
+        android:text="@string/Pass_and_play_player_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+
+    <CheckBox
+        android:id="@+id/checkbox_Player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_1_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_2_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_3_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_4_Select"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_Player5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player_5_Select"
+        android:onClick="onCheckboxClicked"/>
+
+    -->
+
+
+    <!--
+    <Spinner
+        android:id="@+id/player_select_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/player_select_spinner"
+        android:prompt="@string/Player_Select"/>
+
+    -->
+
+    <RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_three_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three_players"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_four_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four_players"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_five_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five_players"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/Player1_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_1_Name" />
+    <EditText
+        android:id="@+id/Player2_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_2_Name" />
+    <EditText
+        android:id="@+id/Player3_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_3_Name" />
+    <EditText
+        android:id="@+id/Player4_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_4_Name" />
+    <EditText
+        android:id="@+id/Player5_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:hint="@string/Player_5_Name" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_go_to_game"
+        android:visibility="invisible"
+        android:onClick="go_to_game"/>
+
+
+</LinearLayout>

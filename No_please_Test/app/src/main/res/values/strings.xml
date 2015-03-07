@@ -4,10 +4,34 @@
     <string name="app_name">No_please_Test</string>
     <!-- <string name="hello_world">Hello world!</string> -->
     <string name="action_settings">Settings</string>
-    <string name="edit_message">Enter a Message Bitch!</string>
-    <string name="button_send">send</string>
+    <string name="Tutorial">tutorial</string>
+    <string name="main_menu">main menu</string>
+    <string name="edit_message">Enter a Message Nice Person</string>
+    <string name="Player_Select">Select players for Pass and Play</string>
+    <string name="Options">Options ignore</string>
+    <string name="Pass_and_play_player_select">Pass and Play Player Select</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_player__select">Player_Select</string>
+    <string name="Player_1_Name">Player 1 Name</string>
+    <string name="Player_2_Name">Player 2 Name</string>
+    <string name="Player_3_Name">Player 3 Name</string>
+    <string name="Player_4_Name">Player 4 Name</string>
+    <string name="Player_5_Name">Player 5 Name</string>
+    <string name="title_activity_go_to_game">go to game</string>
+    <string name="score_screen">score screen</string>
+    <string name="title_activity_score_screen">score_screen</string>
+    <string name="title_activity_tutorial">Tutorial</string>
+
+    <string-array name="player_select_spinner">
+        <item>3 players (minimum number)</item>
+        <item>4 players</item>
+        <item>5 players</item>
+    </string-array>
+
+    <string name="three_players">three player game</string>
+    <string name="four_players">four player game</string>
+    <string name="five_players">five player game</string>
 
 </resources>

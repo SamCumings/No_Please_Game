@@ -1,20 +1,16 @@
-package com.example.sam.no_please_test;
+package com.software_dev.sam.no_thanks_framework;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
-import android.widget.EditText;
-// this is a test comment by olaf
+
 
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
         setContentView(R.layout.activity_main);
     }
 
@@ -40,24 +36,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    /*Called to go to options (isn't working yet) */
-    public void go_to_options(View view){
-        //do something in response to button
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        startActivity(intent);
-    }
-    /*should go to player select activity*/
-    public void Player_Select(View view){
-        //do something in response to button
-        Intent intent = new Intent(this, Player_Select.class);
-        startActivity(intent);
-    }
-    /*should go to player select activity*/
-    public void Tutorial(View view){
-        //do something in response to button
-        Intent intent = new Intent(this, Tutorial.class);
-        startActivity(intent);
-    }
-
 }
