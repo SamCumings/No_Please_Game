@@ -7,19 +7,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+@string/Player_Select"
+        android:text="@string/Player_Select"
         android:onClick="Player_Select"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+@string/Tutorial"
+        android:text="@string/Tutorial"
         android:onClick="Tutorial"/>
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+@string/Options"
+        android:text="@string/Options"
         android:onClick="go_to_options"/>
 
 

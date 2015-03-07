@@ -1,8 +1,9 @@
-package no.please.com.no_please;
+/*
+package com.example.sam.no_please_test;
 
-/**
- * Created by olaf on 2/14/15.
- */
+ //
+ // Created by olaf on 2/14/15.
+ //
 public class Player {
 
     int[] Hand = new int[33];
@@ -48,3 +49,4 @@ public class Player {
     }
 
 }
+*/
