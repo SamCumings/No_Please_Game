@@ -7,7 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.EditText;
+
  // Comment by Kym to show commited chages works
+ // Commit by TJ to show commit works through Android Studio
+
 public class MainActivity extends ActionBarActivity {
 
     //creates the layout for main activity
