@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.EditText;
 
+// Test commit for TJ
+
 public class MainActivity extends ActionBarActivity {
 
     //creates the layout for main activity
