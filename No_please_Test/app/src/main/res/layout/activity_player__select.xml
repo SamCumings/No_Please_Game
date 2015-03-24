@@ -4,12 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sam.no_please_test.Player_Select">
+    tools:context="com.example.sam.no_please_test.Player_Select"
+    android:weightSum="1">
 
     <TextView
         android:text="@string/Pass_and_play_player_select"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0.11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select the Number of Players for Your Game"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
 
     <RadioGroup
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,17 +30,17 @@
         <RadioButton android:id="@+id/radio_three_players"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/three_players"
+            android:text="3 Players"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/radio_four_players"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/four_players"
+            android:text="4 Players"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/radio_five_players"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/five_players"
+            android:text="5 Players"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 

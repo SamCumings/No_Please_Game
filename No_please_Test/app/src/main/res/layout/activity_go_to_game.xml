@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/game_screen_title"
-        android:text="@string/hello_world"
+        android:text="Let&apos;s Play!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

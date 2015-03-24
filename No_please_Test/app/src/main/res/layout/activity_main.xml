@@ -1,20 +1,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#ff94ffcb">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12" />
+
+    <TextView
+        android:layout_width="2in"
+        android:layout_height="93dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="No_Please"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:elegantTextHeight="false"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.15" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Player_Select"
         android:onClick="Player_Select"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Tutorial"
-        android:onClick="Tutorial"/>
-
 
     <Button
         android:layout_width="wrap_content"
@@ -22,7 +45,11 @@
         android:text="@string/Options"
         android:onClick="go_to_options"/>
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tutorial"
+        android:onClick="Tutorial"/>
 
 
 </LinearLayout>
