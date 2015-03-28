@@ -1,4 +1,4 @@
-/*
+
 package com.example.sam.no_please_test;
 
  //
@@ -18,12 +18,12 @@ public class Player {
         handSize = 0;
         tokenCount = 11;
         //playerType type; //when do we assign this?
-        playerName=name;
+        playerName = name;
         playerNumber = number;
 
     } //Player constructor
 
-    void passCard( Card card ) { //passing in Card object
+    /*void passCard( Card card ) { //passing in Card object
         //take one token from player
         tokenCount--;
         //put the token on the card
@@ -40,7 +40,7 @@ public class Player {
         tokenCount += card.numTokensAttached;
 
     } //takeCard function
-
+*/
     boolean enoughTokens() {
 
         if ( tokenCount == 0 ) return false;
@@ -49,4 +49,3 @@ public class Player {
     }
 
 }
-*/

@@ -47,9 +47,16 @@ public class go_to_game extends ActionBarActivity {
         TextView player5 = (TextView) this.findViewById(R.id.Player5);
         player5.setText(String.valueOf(player_5_name));
 
-
-
-
+        //creating players
+        Player Player1 = new Player(player_1_name, 1);
+        Player Player2 = new Player(player_2_name, 2);
+        Player Player3 = new Player(player_3_name, 3);
+        if(number_players >= 4) {
+            Player Player4 = new Player(player_4_name, 4);
+        }
+        if(number_players == 5) {
+            Player Player5 = new Player(player_5_name, 5);
+        }
 
     }
 
