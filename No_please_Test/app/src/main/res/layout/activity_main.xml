@@ -4,52 +4,71 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="#ff94ffcb">
+    android:background="@android:color/background_dark"
+    android:baselineAligned="false" >
 
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.12" />
+        android:id="@+id/imageView"
+        android:layout_weight="0.13"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:layout_width="2in"
         android:layout_height="93dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="No_Please"
+        android:text=" No_Please"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
         android:elegantTextHeight="false"
         android:textAlignment="center"
         android:textSize="60sp"
-        android:textIsSelectable="false" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.15" />
+        android:textIsSelectable="false"
+        android:textColor="#ff20a1ff"
+        android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Player_Select"
-        android:onClick="Player_Select"/>
+        android:onClick="Player_Select"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff82ff43" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView5"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Options"
-        android:onClick="go_to_options"/>
+        android:onClick="go_to_options"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff82ff43" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView6"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Tutorial"
-        android:onClick="Tutorial"/>
+        android:onClick="Tutorial"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff82ff43" />
 
 
 </LinearLayout>

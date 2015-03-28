@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.sam.no_please_test.Player_Select"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@android:color/background_dark">
 
     <TextView
         android:text="@string/Pass_and_play_player_select"
@@ -20,7 +21,8 @@
         android:text="Select the Number of Players for Your Game"
         android:id="@+id/textView4"
         android:layout_gravity="center_horizontal"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="#ff20a1ff" />
 
     <RadioGroup
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,17 +33,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3 Players"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:textColor="#ff20a1ff"
+            android:buttonTint="#ff20a1ff" />
         <RadioButton android:id="@+id/radio_four_players"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4 Players"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:textColor="#ff20a1ff"
+            android:buttonTint="#ff20a1ff" />
         <RadioButton android:id="@+id/radio_five_players"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 Players"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:buttonTint="#ff20a1ff"
+            android:textColor="#ff20a1ff" />
     </RadioGroup>
 
     <EditText
@@ -49,31 +57,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:hint="@string/Player_1_Name" />
+        android:hint="@string/Player_1_Name"
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player2_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:hint="@string/Player_2_Name" />
+        android:hint="@string/Player_2_Name"
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player3_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:hint="@string/Player_3_Name" />
+        android:hint="@string/Player_3_Name"
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player4_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:hint="@string/Player_4_Name" />
+        android:hint="@string/Player_4_Name"
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player5_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:hint="@string/Player_5_Name" />
+        android:hint="@string/Player_5_Name"
+        android:textColor="#ff20a1ff" />
 
     <Button
         android:id="@+id/button"
