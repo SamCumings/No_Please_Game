@@ -1,4 +1,4 @@
-/*
+
 package com.example.sam.no_please_test;
 
 //
@@ -7,38 +7,24 @@ package com.example.sam.no_please_test;
 
 public class Card
 {
-    private int id;
-    private Bitmap bmp;
-    private numTokensAttatched = 0;
+    private int value;
+    private int numChips;
 
-    public Card(int newId)
+    public Card(int newValue)
     {
-        id = newId;
+        value = newValue;
+        numChips = 0;
     }
 
-    public void setBitmap(Bitmap newBitmap)
+    public int getValue()
     {
-        bmp = newBitmap;
+        return value;
     }
 
-    public Bitmap getBitmap()
+    void incrementChips()
     {
-        return bmp;
+        numChips++;
     }
-
-    public int getId()
-    {
-        return id;
-    }
-
-    public void attatchToken()
-    {
-        numTokensAttatched += numTokensAttatched
-    }
-
-
-
 }
-*/
 
 
