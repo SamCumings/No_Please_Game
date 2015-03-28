@@ -83,9 +83,41 @@ public class go_to_game extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //called when take button pressed
+    public void take_button(View view){
+        //state changes
+        //add current card to current player's hand
+        //add chips on card to current player's pool
+        //check if the game is over
+        //draw a new card
+        //change current player to the next player
+        //check if that new player can pass or not (might be more of an image thing)
+        //image changes
+        //change the text view for current player
+        //if game is over make score screen button visible
+        //change current card to the newly drawn card
+        //change current amount of chips (to the new current player)
+        //change current highlighted player
+        //check if the pass button should be greyed out for this player
+    }
+    //called when pass button pressed
+    public void pass_button(View view){
+        //state changes
+        //lose a token from the current player
+        //add a token to the current card
+        //change the current player to the next player
+        //check if the new player can hit the pass button
+        //image changes
+        //change current highlighted character
+        //check if the pass button should be greyed out
+        //change number of chips to the new player's chips
+    }
+
     //should go to score screen activity
     public void score_screen(View view){
         //goes to next screen in response to button press
+
+        //to do pass player information to score screen
         Intent intent = new Intent(this, score_screen.class);
         startActivity(intent);
     }
