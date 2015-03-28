@@ -1,4 +1,5 @@
-/*package com.example.sam.no_please_test;
+/*
+package com.example.sam.no_please_test;
 
 //
 // Created by Kym on 3/7/15.
@@ -52,4 +53,5 @@ class Deck
         return numCardsLeft;
     }
 }
+
 */
