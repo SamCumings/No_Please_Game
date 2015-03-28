@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.EditText;
 import android.widget.RadioButton;
 
 import android.widget.TextView;
@@ -119,8 +120,35 @@ public class Player_Select extends ActionBarActivity {
     public void go_to_game(View view){
         //response to button press pass the number of players to game screen. Pass it the Number of players through the put Extra thing.
         // need to get bundles understood so I can pass more than just one tiny bit of information.
+
+        EditText editText1 = (EditText) findViewById(R.id.Player1_Name);
+        String player_1_name = editText1.getText().toString();
+
+        EditText editText2 = (EditText) findViewById(R.id.Player2_Name);
+        String player_2_name = editText2.getText().toString();
+
+        EditText editText3 = (EditText) findViewById(R.id.Player3_Name);
+        String player_3_name = editText3.getText().toString();
+
+        EditText editText4 = (EditText) findViewById(R.id.Player4_Name);
+        String player_4_name = editText4.getText().toString();
+
+        EditText editText5 = (EditText) findViewById(R.id.Player5_Name);
+        String player_5_name = editText5.getText().toString();
+
+
         Intent intent = new Intent(this, go_to_game.class);
-        intent.putExtra("EXTRA_NUMBER_PLAYERS",number_players);
+        Bundle bundle = new Bundle();
+
+        bundle.putString("EXTRA_NUMBER_PLAYER_1_NAME", player_1_name);
+        bundle.putString("EXTRA_NUMBER_PLAYER_2_NAME", player_2_name);
+        bundle.putString("EXTRA_NUMBER_PLAYER_3_NAME", player_3_name);
+        bundle.putString("EXTRA_NUMBER_PLAYER_4_NAME", player_4_name);
+        bundle.putString("EXTRA_NUMBER_PLAYER_5_NAME", player_5_name);
+
+        bundle.putInt("EXTRA_NUMBER_PLAYERS", number_players);
+
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
