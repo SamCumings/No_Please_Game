@@ -47,16 +47,17 @@ public class go_to_game extends ActionBarActivity {
         TextView player5 = (TextView) this.findViewById(R.id.Player5);
         player5.setText(String.valueOf(player_5_name));
 
-        //creating players
-        Player Player1 = new Player(player_1_name, 1);
-        Player Player2 = new Player(player_2_name, 2);
-        Player Player3 = new Player(player_3_name, 3);
-        if(number_players >= 4) {
-            Player Player4 = new Player(player_4_name, 4);
-        }
-        if(number_players == 5) {
-            Player Player5 = new Player(player_5_name, 5);
-        }
+        Game new_game = new Game (number_players,player_1_name,player_2_name,player_3_name,player_4_name,player_5_name);
+
+        TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
+        current_card.setText(String.valueOf(new_game.current_card.getValue()));
+
+        TextView current_player_name = (TextView) this.findViewById(R.id.current_player_name);
+        current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
+
+        TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
+        current_player_tokens.setText(String.valueOf(new_game.Current_Player.tokenCount));
+
 
     }
 
@@ -86,31 +87,32 @@ public class go_to_game extends ActionBarActivity {
     //called when take button pressed
     public void take_button(View view){
         //state changes
-        //add current card to current player's hand
-        //add chips on card to current player's pool
-        //check if the game is over
-        //draw a new card
-        //change current player to the next player
-        //check if that new player can pass or not (might be more of an image thing)
+            //add current card to current player's hand
+            //add chips on card to current player's pool
+            //check if the game is over
+            //draw a new card
+            //change current player to the next player
+            //check if that new player can pass or not (might be more of an image thing)
         //image changes
-        //change the text view for current player
-        //if game is over make score screen button visible
-        //change current card to the newly drawn card
-        //change current amount of chips (to the new current player)
-        //change current highlighted player
-        //check if the pass button should be greyed out for this player
+            //change the text view for current player
+            //if game is over make score screen button visible
+            //change current card to the newly drawn card
+            //change current amount of chips (to the new current player)
+            //change current highlighted player
+            //check if the pass button should be greyed out for this player
+
     }
     //called when pass button pressed
     public void pass_button(View view){
         //state changes
-        //lose a token from the current player
-        //add a token to the current card
-        //change the current player to the next player
-        //check if the new player can hit the pass button
+            //lose a token from the current player
+            //add a token to the current card
+            //change the current player to the next player
+            //check if the new player can hit the pass button
         //image changes
-        //change current highlighted character
-        //check if the pass button should be greyed out
-        //change number of chips to the new player's chips
+            //change current highlighted character
+            //check if the pass button should be greyed out
+            //change number of chips to the new player's chips
     }
 
     //should go to score screen activity

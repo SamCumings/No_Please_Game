@@ -8,7 +8,7 @@ package com.example.sam.no_please_test;
 public class Card
 {
     private int value;
-    private int numChips;
+    public int numChips;
 
     public Card(int newValue)
     {
