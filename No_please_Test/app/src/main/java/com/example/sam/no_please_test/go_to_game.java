@@ -9,10 +9,22 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.List;
 
 
 public class go_to_game extends ActionBarActivity {
     //handles issues of displaying the game
+
+    public String hand_list_to_string(List<Card> hand){
+        String text_hand = "";
+
+        for (Card s : hand)
+        {
+            text_hand += s.getValue() + " ";
+        }
+
+        return text_hand;
+    }
 
     public void update(Game new_game){
         TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
@@ -28,25 +40,26 @@ public class go_to_game extends ActionBarActivity {
         current_player_tokens.setText(String.valueOf(new_game.Current_Player.tokenCount));
 
         TextView player_1_cards = (TextView) this.findViewById(R.id.Player1_cards);
-        player_1_cards.setText(Arrays.toString(new_game.Player_List[0].Hand));
+        player_1_cards.setText((hand_list_to_string(new_game.Player_List[0].Hand)));
 
         TextView player_2_cards = (TextView) this.findViewById(R.id.Player2_cards);
-        player_2_cards.setText(Arrays.toString(new_game.Player_List[1].Hand));
+        player_2_cards.setText((hand_list_to_string(new_game.Player_List[1].Hand)));
 
         TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
-        player_3_cards.setText(Arrays.toString(new_game.Player_List[2].Hand));
+        player_3_cards.setText((hand_list_to_string(new_game.Player_List[2].Hand)));
 
         if(new_game.number_players>3) {
             TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
-            player_4_cards.setText(Arrays.toString(new_game.Player_List[3].Hand));
+            player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
         }
         if(new_game.number_players>4){
             TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
-            player_5_cards.setText(Arrays.toString(new_game.Player_List[4].Hand));
+            player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
         }
     }
 
-
+    Game new_game;
+    Card test_card;
 
 
     @Override
@@ -86,44 +99,12 @@ public class go_to_game extends ActionBarActivity {
         player5.setText(String.valueOf(player_5_name));
 
         //game called
-        Game new_game = new Game (number_players,player_1_name,player_2_name,player_3_name,player_4_name,player_5_name);
+        new_game = new Game (number_players,player_1_name,player_2_name,player_3_name,player_4_name,player_5_name);
 
         //hides unused textviews (if statements for players 4 and 5)
 
         //update function pretty much
-        TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
-        current_card.setText(String.valueOf(new_game.current_card.getValue()));
-
-        TextView current_card_chips = (TextView) this.findViewById(R.id.Current_Card_Chips);
-        current_card_chips.setText(String.valueOf(new_game.current_card.numChips));
-
-        TextView current_player_name = (TextView) this.findViewById(R.id.current_player_name);
-        current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
-
-        TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
-        current_player_tokens.setText(String.valueOf(new_game.Current_Player.tokenCount));
-
-        TextView player_1_cards = (TextView) this.findViewById(R.id.Player1_cards);
-        player_1_cards.setText(Arrays.toString(new_game.Player_List[0].Hand));
-
-        TextView player_2_cards = (TextView) this.findViewById(R.id.Player2_cards);
-        player_2_cards.setText(Arrays.toString(new_game.Player_List[1].Hand));
-
-        TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
-        player_3_cards.setText(Arrays.toString(new_game.Player_List[2].Hand));
-
-        if(number_players>3) {
-            TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
-            player_4_cards.setText(Arrays.toString(new_game.Player_List[3].Hand));
-        }
-        if(number_players>4){
-            TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
-            player_5_cards.setText(Arrays.toString(new_game.Player_List[4].Hand));
-        }
-
-
-
-
+        update(new_game);
     }
 
     //menu stuff
@@ -152,11 +133,11 @@ public class go_to_game extends ActionBarActivity {
     //called when take button pressed
     public void take_button(View view){
         //state changes
-            //add current card to current player's hand
-            //add chips on card to current player's pool
+            //add current card to current player's hand-
+            //add chips on card to current player's pool-
             //check if the game is over
-            //draw a new card
-            //change current player to the next player
+            //draw a new card-
+            //change current player to the next player-
             //check if that new player can pass or not (might be more of an image thing)
         //image changes
             //change the text view for current player
@@ -165,6 +146,9 @@ public class go_to_game extends ActionBarActivity {
             //change current amount of chips (to the new current player)
             //change current highlighted player
             //check if the pass button should be greyed out for this player
+
+        test_card=new_game.take_card();
+        update(new_game);
 
 
 

@@ -1,12 +1,15 @@
 
 package com.example.sam.no_please_test;
 
- //
+import java.util.ArrayList;
+import java.util.List;
+
+//
  // Created by olaf on 2/14/15.
  //
 public class Player {
 
-    Card[] Hand;
+     List<Card> Hand = new ArrayList<Card>();
     int handSize;
     int tokenCount;
     //enum playerType {HUMAN, AI};
@@ -34,7 +37,7 @@ public class Player {
 */
     public void takeCard( Card card ) { //passing in Card object
         //put Card in hand
-        Hand[handSize]=card;
+        Hand.add(card);
         //increment hand size
         handSize = handSize++;
 

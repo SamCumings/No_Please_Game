@@ -44,7 +44,7 @@ public class Game{
     public void go_next_player(){
         Current_Player=Player_List[Current_Player.playerNumber++%number_players];
     }
-    public Card take_card(Card current_card){
+    public Card take_card(){
         //fix player class
         Current_Player.takeCard (current_card);
         if(is_game_over()){
