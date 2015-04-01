@@ -15,7 +15,7 @@
         android:src="@mipmap/game_logo" />
 
     <TextView
-        android:layout_width="2in"
+        android:layout_width="320dp"
         android:layout_height="93dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text=" No_Please"
@@ -26,6 +26,12 @@
         android:textIsSelectable="false"
         android:textColor="#ff20a1ff"
         android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView7" />
 
     <Button
         android:layout_width="wrap_content"
@@ -67,7 +73,8 @@
         android:text="@string/Tutorial"
         android:onClick="Tutorial"
         android:layout_gravity="center_horizontal"
-        android:background="#ff82ff43" />
+        android:background="#ff82ff43"
+        android:id="@+id/tutorial" />
 
 
 </LinearLayout>

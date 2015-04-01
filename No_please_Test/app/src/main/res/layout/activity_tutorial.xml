@@ -4,19 +4,50 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.sam.no_please_test.Tutorial"
-    android:background="@android:color/background_dark">
+    android:background="@android:color/background_dark"
+    android:weightSum="1">
 
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tutorial"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff20a1ff"
+        android:textSize="50dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_menu"
+        android:text="Main Menu"
         android:onClick="back_to_main_menu"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/mainMenu"
+        android:nestedScrollingEnabled="false" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal"
+        android:fillViewport="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView3"
+            android:textColor="#ff20a1ff"
+            android:text="Contents 33 cards with numbers from 3 to 35  55 playing chips  Idea of the Game One card lies in the center of the table, face-up. On his turn, each player must decide: Either he takes the card and puts it in front of himself, giving him points equal to the value printed on the card, or he declines the card by putting one of his chips next to it. The turn to play passes clockwise, and the next player faces the same decision: Either accept the card (including the chip), or decline it and pay one of his own chips. The game goes on this way until all cards have found someone willing to accept them. The player with the fewest points wins.  The Cards and the Chips Each single card which a player has in front of him counts points according to the number it shows. Therefore, a 7 counts as seven points, a 15 brings fifteen points, a 29 counts as twentynine points, and so on. EXAMPLE: Sabrina has four single cards in front of her, totaling 41 points. (4+6+10+21). Unbroken number sequences only count as points according to the lowest number of the sequence. For example, if a player has the 8 and the 9 in front of him, those two cards together only count as 8 points. If he has the cards with the numbers 17, 18, 19 and 20 in front of him, all of them together only get him 17 points. NOTE: Getting unbroken number sequences is better than getting single cards. EXAMPLE: Peter has a total of 28 points in front of him: 13 for the single card, and 15 for the sequence. If he can get the 14 as well, he will have an unbroken sequence from 13 to 16, which will count as only 13 points all together. To avoid having to take a card, the player whose turn it is must pay a chip. Therefore, it is always good to have many chips, in order to be able to decline cards you don’t want. Moreover, at the end of the game, each chip you have subtracts from your total points.  Preparation Each player gets 11 chips. If there are only three or four players, there are chips left over – these are not needed, and you can put them back into the box. During the game, all players should keep their chips hidden in their hand so that the other players cannot see them. Shuffle the cards, then count off 24 cards face-down and put them into the center of the table as a face-down deck. The remaining 9 cards are not needed for this game and are put back into the box, without any player looking at them.  How to Play Randomly determine which player begins. That player turns over the top card of the deck and puts it next to the deck, face-up. Then he has to: • either take the card and put it in front of himself, face-up • or decline it and put one of his chips next to the card. If the player declines the card, play passes to his left-hand neighbor. That player faces the same decision: either take the card (and the chip), or decline it and pay one of his chips. In this way, the game continues with the turn passing clockwise. Each player in turn decides whether to take the card (and all chips next to it), or decline it and add one of his own chips to the pool. Thorsten Gimmler  When finally a player decides to take the card (and all chips next to it), he puts it in front of himself face-up and takes the chips up in hand. After that, this player turns over the next card of the deck. As described above, he must then decide whether to take the card, or decline it and pay a chip. If he declines, the turn to play – and the decision whether or not to accept the card – again passes to his left-hand neighbor, and so on. Often, players will decline a card several turns over, so that the number of chips lying next to the card becomes quite large. This is absolutely ok – in fact, it’s an interesting aspect of the game. Example: Peter turns over the top card of the deck. It shows the number 11. As this card would get Peter 11 points, he declines it and puts one of his chips next to it. Sabrina also declines and adds one of her chips. Lisa, however, would rather save her chips, so she accepts the card. She puts down the 11 in front of herself face-up, and takes the two chips next to it up in hand. Then, Lisa turns over the top card of the deck – it’s the 16. Lisa could take the card straight away, but that would get her another 16 points. She declines the card, putting one of her chips next to it. Then the game goes on. Note: To make it easy for all players to see who has how many points, unbroken sequences should be placed with the cards overlapping, well separated from single cards. All card values have to be clearly visible at all times during the game. The game continues in this manner until all cards of the deck have been used up. As soon as the last card of the deck has found a player who accepts it, the game ends and the final scores are calculated.  End of the Game / Scorekeeping After all 24 cards have found an owner, each player calculates his final score by adding up the values of all his single cards, plus that of the lowest card of each unbroken number sequence he has in front of him. From the total, he subtracts the number of chips he still has. It’s pretty simple, really. Example: At the end of the game, Lisa has three single cards and two sequences in front of her. Together, they get her 59 points (3+7+10+14+25 = 59). From that, she subtracts the 8 chips she has left, for a final score of 51 (59-8 = 51). The player with the lowest final score – i.e., the fewest points – wins the game.  Tactical Tips ❋ Sooner or later, you will run out of chips, which means that you will have to take a card. Therefore, especially at the beginning of the game, don’t be too hesitant about taking a card that doesn’t have that many chips next to it. A 15, for example, with three or four chips next to it, may well be worth considering. ❋ A good way to grab as many chips as possible is to decline a card which you yourself could easily take (because it would complete or add to one of your sequences), but which your fellow players won’t want (because it would get them too many points). Just send it around for another turn or two; it will come back to you with a lot more chips. Example: Sabrina already has the 34 in front of her. The next card to be turned over is the 35. Sabrina could take it at once, as it would allow her to form a sequence with the 34 she already has. Her fellow players, however, do not want to take the 35 at all, because to them it’s worth 35 points. Thus, Sabrina doesn’t accept the 35 on her turn, but declines it, waiting until it comes back her way with a decent number of chips. Note: Of course, you can try to send a very high card around several times, but you shouldn’t get too greedy! When some other player runs out of chips, he will have to take it – and you can never know when that moment will come. ❋ Since nine cards are put aside at the beginning of the game, there will necessarily be a few gaps between the cards. Of course, you’ll have to speculate upon being able to close gaps between some of your cards at a later point (for example, between the 22 and the 24) – a little luck is part of the game – but you can never rely on that happening. The bigger the gap (say, between the 30 and the 35), the smaller the chance that all necessary cards to close it are in the deck – and that you will get them all. ❋ If you want to put a little more emphasis on tactics, you can try the following variant rule: At the beginning of the game, each player only gets 10 chips. The cards with the numbers 10, 20 and 30 are taken out and put into the box, before the 24 cards for the deck are counted off (face-down). The six cards which then remain are also put into the box. The rest of the game is unchanged, but knowing three of the nine gaps in advance increases the tactical element of the game."
+            android:editable="false" />
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/button2"
         android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
