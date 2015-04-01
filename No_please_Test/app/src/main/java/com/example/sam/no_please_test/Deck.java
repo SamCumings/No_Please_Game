@@ -11,7 +11,7 @@ class Deck
     private Stack<Card> deck = new Stack<>();
     private int numCardsLeft = 33;
 
-     private void initCards()
+     public void initCards()
     {
         for (int i = 3; i < 36; i++)
         {
@@ -26,7 +26,7 @@ class Deck
         Collections.shuffle(deck, new Random());
     }
 
-    private boolean isDeckEmpty()
+    public boolean isDeckEmpty()
     {
         if(numCardsLeft <= 9)
         {

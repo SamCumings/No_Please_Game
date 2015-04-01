@@ -6,7 +6,7 @@ package com.example.sam.no_please_test;
  //
 public class Player {
 
-    int[] Hand = new int[33];
+    Card[] Hand;
     int handSize;
     int tokenCount;
     //enum playerType {HUMAN, AI};
@@ -16,6 +16,7 @@ public class Player {
     public Player( String name, int number ) {
 
         handSize = 0;
+
         tokenCount = 11;
         //playerType type; //when do we assign this?
         playerName = name;
@@ -30,17 +31,20 @@ public class Player {
         card.attachToken(); //increment token count on card
 
     } //passCard function
-
-    void takeCard( Card card ) { //passing in Card object
-        //put card id in hand
-        Hand[handSize]=card.id;
+*/
+    public void takeCard( Card card ) { //passing in Card object
+        //put Card in hand
+        Hand[handSize]=card;
         //increment hand size
         handSize = handSize++;
+
+        //sort array(figure out how to do this)-------------------------
+
+
         //add tokens from card to user count
-        tokenCount += card.numTokensAttached;
+        tokenCount += card.numChips;
 
     } //takeCard function
-*/
     boolean enoughTokens() {
 
         if ( tokenCount == 0 ) return false;
