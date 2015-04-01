@@ -91,20 +91,28 @@
             android:layout_height="wrap_content"/>
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/Current_Card"
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test: Current Card"
             />
+        <TextView
+            android:id="@+id/Current_Card_Chips"
+            android:layout_below="@+id/Current_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test: Current Card_Chips"
+            />
+
         <Button
+            android:layout_toLeftOf="@+id/pass_button"
             android:id="@+id/take_button"
-            android:text="test: take button"
+            android:text="test: take"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="take_button"/>
@@ -118,7 +126,7 @@
             android:layout_height="wrap_content"
             android:onClick="pass_button"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/current_player_name"
