@@ -61,7 +61,7 @@ public class Game{
     }
     public void pass_card(){
         current_card.incrementChips();
-        Current_Player.tokenCount--;
+        Current_Player.chipCount--; //changed to chip for consistency
         go_next_player();
     }
     public boolean is_game_over(){

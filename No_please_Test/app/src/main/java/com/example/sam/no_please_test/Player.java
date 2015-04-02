@@ -3,15 +3,16 @@ package com.example.sam.no_please_test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections; //for compare
 
 //
  // Created by olaf on 2/14/15.
  //
-public class Player {
+public class Player{
 
      List<Card> Hand = new ArrayList<Card>();
     int handSize;
-    int tokenCount;
+    int chipCount;
     //enum playerType {HUMAN, AI};
     int playerNumber;
     String playerName;
@@ -20,7 +21,7 @@ public class Player {
 
         handSize = 0;
 
-        tokenCount = 11;
+        chipCount = 11;
         //playerType type; //when do we assign this?
         playerName = name;
         playerNumber = number;
@@ -40,19 +41,19 @@ public class Player {
         Hand.add(card);
         //increment hand size
         handSize = handSize++;
-
-        //sort array(figure out how to do this)-------------------------
-
-
+        //sort array
+        Collections.sort(Hand);
         //add tokens from card to user count
-        tokenCount += card.numChips;
+        chipCount += card.numChips;
 
     } //takeCard function
+
     boolean enoughTokens() {
 
-        if ( tokenCount == 0 ) return false;
+        if ( chipCount == 0 ) return false;
         return true;
 
-    }
+    } // enoughTokens function
 
-}
+
+ }

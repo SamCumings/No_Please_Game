@@ -37,7 +37,7 @@ public class go_to_game extends ActionBarActivity {
         current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
 
         TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
-        current_player_tokens.setText(String.valueOf(new_game.Current_Player.tokenCount));
+        current_player_tokens.setText(String.valueOf(new_game.Current_Player.chipCount));
 
         TextView player_1_cards = (TextView) this.findViewById(R.id.Player1_cards);
         player_1_cards.setText((hand_list_to_string(new_game.Player_List[0].Hand)));
