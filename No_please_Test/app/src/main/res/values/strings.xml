@@ -26,6 +26,15 @@
     <string name="empty_string"></string>
     <string name="PL1SCORE">Player 1 score: </string>
 
+    <!--Tutorial Screen Start Here-->
+    <string name="tutorialScreenTitle"><b>Tutorial</b></string>
+    <string name="howToPlayTitle"><b>How to Play</b></string>
+    <string name="gameRules">Randomly determine which player begins. That player turns over the top card of the deck
+    and puts it next to the deck, face-up. Then he has to: \n\n
+        <b>•</b> either take the card and put it in front of himself, face-up \n\n
+        <b>•</b> or decline it and put one of his chips next to the card.
+    </string>
+
     <string-array name="player_select_spinner">
         <item>3 players (minimum number)</item>
         <item>4 players</item>
