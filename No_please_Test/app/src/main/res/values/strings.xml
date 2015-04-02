@@ -26,6 +26,39 @@
     <string name="empty_string"></string>
     <string name="PL1SCORE">Player 1 score: </string>
 
+    <!--Tutorial Screen Start Here-->
+    <string name="tutorialScreenTitle"><b>Tutorial</b></string>
+    <string name="howToPlayTitle"><b>How to Play</b></string>
+    <string name="gameRules">Randomly determine which player begins. That player turns over the top card of the deck
+    and puts it next to the deck, face-up. Then he has to: \n\n
+    <b>•</b> either take the card and put it in front of himself, face-up \n\n
+    <b>•</b> or decline it and put one of his chips next to the card. \n\n
+    If the player declines the card, play passes to his left-hand neighbor. That player faces the same
+    decision: either take the card (and the chip), or decline it and pay one of his chips. In this way,
+    the game continues with the turn passing clockwise. Each player in turn decides whether to take
+    the card (and all chips next to it), or decline it and add one of his own chips to the pool. \n\n
+    <b>❋</b> When finally a player decides to take the card (and all chips next to it), he puts it in front
+    of himself face-up and takes the chips up in hand. After that, this player turns over the
+    next card of the deck. As described above, he must then decide whether to take the card,
+    or decline it and pay a chip. If he declines, the turn to play – and the decision whether
+    or not to accept the card – again passes to his left-hand neighbor, and so on. \n\n
+    Often, players will decline a card several turns over, so that the number of chips lying next
+    to the card becomes quite large. This is absolutely <b>ok</b> – in fact, it’s an interesting aspect
+    of the game. \n\n
+    <b><u>Example:</u></b> Peter turns over the top card of the deck. It shows the number 11. As this card would get Peter
+    11 points, he declines it and puts one of his chips next to it. Sabrina also declines and adds one of her
+    chips. Lisa, however, would rather save her chips, so she accepts the card. She puts down the 11 in front
+    of herself face-up, and takes the two chips next to it up in hand. Then, Lisa turns over the top card of
+    the deck – it’s the 16. Lisa could take the card straight away, but that would get her another 16 points.
+    She declines the card, putting one of her chips next to it. Then the game goes on. \n\n
+    <b><i>Note:</i></b> To make it easy for all players to see who has how many points, unbroken sequences should
+    be placed with the cards overlapping, well separated from single cards. All card values have to be
+    clearly visible at all times during the game. \n\n
+    The game continues in this manner until all cards of the deck have been used up. As soon
+    as the last card of the deck has found a player who accepts it, the game ends and the final
+    scores are calculated. \n
+    </string>
+
     <string-array name="player_select_spinner">
         <item>3 players (minimum number)</item>
         <item>4 players</item>
