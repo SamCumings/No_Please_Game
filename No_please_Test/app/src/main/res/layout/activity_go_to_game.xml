@@ -208,6 +208,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:text="@string/score_screen"
-        android:onClick="score_screen"/>
+        android:onClick="score_screen"
+        android:background="#ff82ff43" />
 
 </LinearLayout>
