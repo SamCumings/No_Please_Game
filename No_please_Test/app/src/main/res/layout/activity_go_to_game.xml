@@ -3,13 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sam.no_please_test.go_to_game">
+    tools:context="com.example.sam.no_please_test.go_to_game"
+    android:background="@android:color/background_dark">
 
     <TextView
         android:id="@+id/game_screen_title"
         android:text="Let&apos;s Play!"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#ff20a1ff" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -18,13 +20,15 @@
             android:id="@+id/Player1"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player1"
             android:id="@+id/Player1_cards"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -34,13 +38,15 @@
             android:id="@+id/Player2"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player2"
             android:id="@+id/Player2_cards"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -50,13 +56,15 @@
             android:id="@+id/Player3"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player3"
             android:id="@+id/Player3_cards"
             android:text="This is a really long test text that is only there to check to see how this handles wrapping replace soon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -66,13 +74,15 @@
             android:id="@+id/Player4"
             android:text="@string/empty_string"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player4"
             android:id="@+id/Player4_cards"
             android:text="@string/empty_string"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -82,13 +92,15 @@
             android:id="@+id/Player5"
             android:text="@string/empty_string"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player5"
             android:id="@+id/Player5_cards"
             android:text="@string/empty_string"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -99,20 +111,22 @@
             android:id="@+id/Current_Card_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current Card: "/>
+            android:text="Current Card: "
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@id/Current_Card_text"
             android:id="@+id/Current_Card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test: Current Card"
-            />
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_below="@id/Current_Card_text"
             android:id="@+id/Current_Card_Chips_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current Card Chips: "/>
+            android:text="Current Card Chips: "
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@id/Current_Card_Chips_text"
             android:id="@+id/Current_Card_Chips"
@@ -120,53 +134,73 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test: Current Card_Chips"
-            />
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_toLeftOf="@+id/pass_button"
-            android:id="@+id/take_button"
-            android:text="test: take"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="take_button"/>
-            <!--android:layout_centerHorizontal="true"-->
-
-        <Button
-            android:id="@+id/pass_button"
-            android:text="test: pass"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="pass_button"/>
-
-    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView9" />
 
     <TextView
         android:id="@+id/Current_Player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current Player"/>
+        android:text="Current Player"
+        android:textColor="#ff20a1ff" />
     <TextView
         android:id="@+id/current_player_name"
         android:text="test: current player name"
 
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#ff20a1ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView10" />
+
     <TextView
         android:id="@+id/Current_Player_Chips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current Player Chips"/>
+        android:text="Current Player Chips"
+        android:textColor="#ff20a1ff" />
     <TextView
         android:id="@+id/current_player_chip_count"
         android:text="test: current player chip count"
 
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#ff20a1ff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/take_button"
+            android:text="Take Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="take_button"
+            android:background="#ff82ff43"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+            <!--android:layout_centerHorizontal="true"-->
+
+        <Button
+            android:id="@+id/pass_button"
+            android:text="Pass Card"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pass_button"
+            android:background="#ff82ff43" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/score_button"

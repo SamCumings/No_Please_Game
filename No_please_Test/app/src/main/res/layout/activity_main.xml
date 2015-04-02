@@ -8,12 +8,6 @@
     android:baselineAligned="false" >
 
 
-    <ImageView
-        android:layout_width="63dp"
-        android:layout_height="75dp"
-        android:id="@+id/imageView"
-        android:src="@mipmap/game_logo" />
-
     <TextView
         android:layout_width="320dp"
         android:layout_height="93dp"
@@ -39,7 +33,8 @@
         android:text="@string/Player_Select"
         android:onClick="Player_Select"
         android:layout_gravity="center_horizontal"
-        android:background="#ff82ff43" />
+        android:background="#ff82ff43"
+        android:id="@+id/Player" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,7 +51,8 @@
         android:text="@string/Options"
         android:onClick="go_to_options"
         android:layout_gravity="center_horizontal"
-        android:background="#ff82ff43" />
+        android:background="#ff82ff43"
+        android:id="@+id/options" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,6 +71,21 @@
         android:layout_gravity="center_horizontal"
         android:background="#ff82ff43"
         android:id="@+id/tutorial" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView8"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/game_logo"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>

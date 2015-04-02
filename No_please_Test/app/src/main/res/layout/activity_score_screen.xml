@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sam.no_please_test.score_screen">
+    tools:context="com.example.sam.no_please_test.score_screen"
+    android:background="@android:color/background_dark">
 
     <TextView
         android:text="Test: Score Screen Title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#ff20a1ff" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -17,13 +19,15 @@
             android:id="@+id/Player1"
             android:text="@string/PL1SCORE"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player1"
             android:id="@+id/Player1_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -33,13 +37,15 @@
             android:id="@+id/Player2"
             android:text="Player 2 score: "
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player2"
             android:id="@+id/Player2_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -49,13 +55,15 @@
             android:id="@+id/Player3"
             android:text="Player 3 score: "
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player3"
             android:id="@+id/Player3_score"
             android:text="This is a really long test text that is only there to check to see how this handles wrapping replace soon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -65,13 +73,15 @@
             android:id="@+id/Player4"
             android:text="Player 4 score: "
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player4"
             android:id="@+id/Player4_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -81,13 +91,15 @@
             android:id="@+id/Player5"
             android:text="Player 5 score: "
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
         <TextView
             android:layout_toRightOf="@+id/Player5"
             android:id="@+id/Player5_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff" />
     </RelativeLayout>
     
     <RelativeLayout
@@ -97,13 +109,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="test: Winner"/>
+                android:text="test: Winner"
+                android:textColor="#ff20a1ff" />
     </RelativeLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_menu"
-        android:onClick="activity_main"/>
+        android:onClick="activity_main"
+        android:background="#ff82ff43"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

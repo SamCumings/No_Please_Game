@@ -94,7 +94,8 @@
         android:layout_height="wrap_content"
         android:text="@string/title_activity_go_to_game"
         android:visibility="invisible"
-        android:onClick="go_to_game"/>
+        android:onClick="go_to_game"
+        android:background="#ff82ff43" />
 
 
 </LinearLayout>
