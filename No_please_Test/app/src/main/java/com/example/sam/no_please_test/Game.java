@@ -42,17 +42,17 @@ public class Game{
         return game_deck.popCard();
     }
     public void go_next_player(){
-        Current_Player=Player_List[Current_Player.playerNumber++%number_players];
+        Current_Player=Player_List[(Current_Player.playerNumber+1)%number_players];
     }
     public Card take_card(){
         //fix player class
         Current_Player.takeCard (current_card);
         if(is_game_over()){
             //game is over
-            return end_card;
+            return current_card=end_card;
         }else {
             go_next_player();
-            return draw_card();
+            return current_card=draw_card();
         }
 
     }

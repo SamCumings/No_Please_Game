@@ -17,7 +17,8 @@ class Deck
         {
             int tempId = i;
             Card tempCard = new Card(tempId);
-            deck.add(tempCard);
+            deck.push(tempCard);
+            randomizeDeck();
         }
     }
 
@@ -44,9 +45,10 @@ class Deck
         return numCardsLeft;
     }
 
-    Card popCard()
+    public Card popCard()
     {
         Card currentCard = deck.pop();
+        decrementNumCards();
         return currentCard;
     }
 }

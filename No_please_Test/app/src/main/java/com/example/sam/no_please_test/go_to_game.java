@@ -56,6 +56,23 @@ public class go_to_game extends ActionBarActivity {
             TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
             player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
         }
+        if (!new_game.Current_Player.enoughTokens()) {
+            View button = findViewById(R.id.pass_button);
+            button.setVisibility(View.INVISIBLE);
+        } else {
+            View button = findViewById(R.id.pass_button);
+            button.setVisibility(View.VISIBLE);
+        }
+        if(new_game.current_card.getValue()==-1){
+            View score_button = findViewById(R.id.score_button);
+            score_button.setVisibility(View.VISIBLE);
+
+            View pass_button = findViewById(R.id.pass_button);
+            pass_button.setVisibility(View.INVISIBLE);
+
+            View take_button = findViewById(R.id.take_button);
+            take_button.setVisibility(View.INVISIBLE);
+        }
     }
 
     Game new_game;
@@ -164,6 +181,8 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted character
             //check if the pass button should be greyed out
             //change number of chips to the new player's chips
+        new_game.pass_card();
+        update(new_game);
     }
 
     //should go to score screen activity
