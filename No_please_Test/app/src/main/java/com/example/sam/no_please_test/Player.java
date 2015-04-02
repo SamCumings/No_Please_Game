@@ -1,6 +1,9 @@
 
 package com.example.sam.no_please_test;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections; //for compare
@@ -8,9 +11,10 @@ import java.util.Collections; //for compare
 //
  // Created by olaf on 2/14/15.
  //
-public class Player{
+public class Player
+{
 
-     List<Card> Hand = new ArrayList<Card>();
+    List<Card> Hand = new ArrayList<Card>();
     int handSize;
     int chipCount;
     //enum playerType {HUMAN, AI};
@@ -54,6 +58,4 @@ public class Player{
         return true;
 
     } // enoughTokens function
-
-
- }
+}

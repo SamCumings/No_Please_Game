@@ -64,13 +64,13 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/Player4"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_toRightOf="@+id/Player4"
             android:id="@+id/Player4_cards"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
@@ -80,13 +80,13 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/Player5"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_toRightOf="@+id/Player5"
             android:id="@+id/Player5_cards"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
@@ -96,19 +96,36 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/Current_Card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Card: "/>
+        <TextView
+            android:layout_toRightOf="@id/Current_Card_text"
             android:id="@+id/Current_Card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test: Current Card"
             />
         <TextView
+            android:layout_below="@id/Current_Card_text"
+            android:id="@+id/Current_Card_Chips_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Card Chips: "/>
+        <TextView
+            android:layout_toRightOf="@id/Current_Card_Chips_text"
             android:id="@+id/Current_Card_Chips"
             android:layout_below="@+id/Current_Card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test: Current Card_Chips"
             />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <Button
             android:layout_toLeftOf="@+id/pass_button"
             android:id="@+id/take_button"
@@ -129,12 +146,21 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/Current_Player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Player"/>
+    <TextView
         android:id="@+id/current_player_name"
         android:text="test: current player name"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+    <TextView
+        android:id="@+id/Current_Player_Chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Player Chips"/>
     <TextView
         android:id="@+id/current_player_chip_count"
         android:text="test: current player chip count"

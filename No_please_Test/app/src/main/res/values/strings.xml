@@ -23,6 +23,8 @@
     <string name="score_screen">Score Screen</string>
     <string name="title_activity_score_screen">Score Screen</string>
     <string name="title_activity_tutorial"><b>Tutorial</b></string>
+    <string name="empty_string"></string>
+    <string name="PL1SCORE">Player 1 score: </string>
 
     <string-array name="player_select_spinner">
         <item>3 players (minimum number)</item>
