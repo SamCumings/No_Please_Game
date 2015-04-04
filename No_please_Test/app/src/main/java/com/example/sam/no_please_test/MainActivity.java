@@ -8,8 +8,7 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.EditText;
 
- // Comment by Kym to show commited chages works
- // Commit by TJ to show commit works through Android Studio
+ //test commit by sam to make a new branch
 
 public class MainActivity extends ActionBarActivity {
 
