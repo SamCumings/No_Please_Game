@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 //Doing a test commit on my own branch
+//ijuhuj
 public class Tutorial extends ActionBarActivity {
 
     @Override
