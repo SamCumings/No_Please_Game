@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
+            android:icon="@mipmap/game_logo"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +27,7 @@
         </activity>
         <activity
             android:name=".Player_Select"
+            android:icon="@mipmap/game_logo"
             android:label="@string/title_activity_player__select"
             android:parentActivityName=".MainActivity" >
             <meta-data
@@ -34,6 +36,7 @@
         </activity>
         <activity
             android:name=".go_to_game"
+            android:icon="@mipmap/game_logo"
             android:label="@string/title_activity_go_to_game"
             android:parentActivityName=".Player_Select" >
             <meta-data
@@ -42,6 +45,7 @@
         </activity>
         <activity
             android:name=".score_screen"
+            android:icon="@mipmap/game_logo"
             android:label="@string/title_activity_score_screen"
             android:parentActivityName=".go_to_game" >
             <meta-data
@@ -50,6 +54,7 @@
         </activity>
         <activity
             android:name=".Tutorial"
+            android:icon="@mipmap/game_logo"
             android:label="@string/title_activity_tutorial"
             android:parentActivityName=".MainActivity" >
             <meta-data

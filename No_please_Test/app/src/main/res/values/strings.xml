@@ -19,11 +19,10 @@
     <string name="Player_3_Name">Player 3 Name</string>
     <string name="Player_4_Name">Player 4 Name</string>
     <string name="Player_5_Name">Player 5 Name</string>
-    <string name="title_activity_go_to_game">Go to game</string>
+    <string name="title_activity_go_to_game">Let's Play!</string>
     <string name="score_screen">Score Screen</string>
     <string name="title_activity_score_screen">Score Screen</string>
     <string name="title_activity_tutorial"><b>Tutorial</b></string>
-    <string name="empty_string"></string>
     <string name="PL1SCORE">Player 1 score: </string>
 
     <!--Tutorial Screen Start Here-->
