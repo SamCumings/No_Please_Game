@@ -55,8 +55,12 @@ public class Player
 
     boolean enoughTokens() {
 
-        if ( chipCount == 0 ) return false;
-        return true;
+        if ( chipCount == 0 ) {
+            return false;
+        } else {
+            return true;
+        }
+
 
     } // enoughTokens function
 }

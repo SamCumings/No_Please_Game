@@ -18,6 +18,7 @@ public class go_to_game extends ActionBarActivity {
 
     Game new_game;
     Card test_card;
+    int number_players;
     TextView current_card,current_card_chips,current_player_name,current_player_tokens,player_1_cards,player_2_cards,player_3_cards,player_4_cards,player_5_cards;
 
     public String hand_list_to_string(List<Card> hand){
@@ -93,16 +94,20 @@ public class go_to_game extends ActionBarActivity {
 
         String player_1_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_1_NAME");
         boolean player1_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_1_AI");
+
         String player_2_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_2_NAME");
         boolean player2_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_2_AI");
+
         String player_3_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_3_NAME");
         boolean player3_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_3_AI");
+
         String player_4_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_4_NAME");
         boolean player4_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_4_AI");
+
         String player_5_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_5_NAME");
         boolean player5_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_5_AI");
 
-        int number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
+        number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
         setContentView(R.layout.activity_go_to_game);
 
 
@@ -168,7 +173,8 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted player
             //check if the pass button should be greyed out for this player
 
-        test_card=new_game.take_card();
+        new_game.take_card();
+
         update(new_game);
 
 
@@ -192,9 +198,6 @@ public class go_to_game extends ActionBarActivity {
     //should go to score screen activity
     public void score_screen(View view){
         //goes to next screen in response to button press
-
-        TextView number_players = (TextView) findViewById(R.id.game_screen_title);
-        int num_players = Integer.parseInt(number_players.getText().toString());
 
         TextView player_1_cards = (TextView) findViewById(R.id.Player1_cards);
         String player_1_cards_string = player_1_cards.getText().toString();
@@ -221,7 +224,7 @@ public class go_to_game extends ActionBarActivity {
 
         Bundle scores = new Bundle();
 
-        scores.putInt("number_of_players", num_players);
+        scores.putInt("number_of_players", number_players);
         scores.putString("player_1_score", player_1_cards_string);
         scores.putString("player_2_score", player_2_cards_string);
         scores.putString("player_3_score", player_3_cards_string);

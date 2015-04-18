@@ -2,6 +2,7 @@ package com.example.sam.no_please_test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Sam on 3/28/15.
@@ -13,6 +14,7 @@ public class Game{
     Card current_card;
     Card end_card;
     Player[] Player_List;
+    Random random_num;
 
     public Game(int number_player, String player1, boolean player1_AI, String player2, boolean player2_AI, String player3, boolean player3_AI, String player4,boolean player4_AI, String player5, boolean player5_AI){
         number_players=number_player;
@@ -20,6 +22,7 @@ public class Game{
         Player_List = new Player[number_player];
         game_deck = new Deck();
         game_deck.initCards();
+        random_num=new Random();
 
 
         //for consistency Player number is going to be equal to it's array position (starting at zero)
@@ -43,6 +46,21 @@ public class Game{
     }
     public void go_next_player(){
         Current_Player=Player_List[(Current_Player.playerNumber+1)%number_players];
+        if (Current_Player.is_player_AI){
+            AI_turn();
+        }
+    }
+    public void AI_turn(){
+        int decision=random_num.nextInt()%100;
+        if (!check_pass_card()){
+            take_card();
+        }
+        if (decision>20){
+            pass_card();
+        }
+        else {
+            take_card();
+        }
     }
     public Card take_card(){
         //fix player class
@@ -51,8 +69,9 @@ public class Game{
             //game is over
             return current_card=end_card;
         }else {
+            current_card=draw_card();
             go_next_player();
-            return current_card=draw_card();
+            return current_card;
         }
 
     }

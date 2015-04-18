@@ -56,9 +56,9 @@ public class Player_Select extends ActionBarActivity {
         boolean on = ((ToggleButton) view).isChecked();
 
         if (on) {
-            player1_AI=false;
-        } else {
             player1_AI=true;
+        } else {
+            player1_AI=false;
         }
     }
     public void onToggleClicked_2(View view) {
@@ -66,9 +66,9 @@ public class Player_Select extends ActionBarActivity {
         boolean on = ((ToggleButton) view).isChecked();
 
         if (on) {
-            player2_AI=false;
-        } else {
             player2_AI=true;
+        } else {
+            player2_AI=false;
         }
     }
     public void onToggleClicked_3(View view) {
@@ -76,9 +76,9 @@ public class Player_Select extends ActionBarActivity {
         boolean on = ((ToggleButton) view).isChecked();
 
         if (on) {
-            player3_AI=false;
-        } else {
             player3_AI=true;
+        } else {
+            player3_AI=false;
         }
     }
     public void onToggleClicked_4(View view) {
@@ -86,9 +86,9 @@ public class Player_Select extends ActionBarActivity {
         boolean on = ((ToggleButton) view).isChecked();
 
         if (on) {
-            player4_AI=false;
-        } else {
             player4_AI=true;
+        } else {
+            player4_AI=false;
         }
     }
     public void onToggleClicked_5(View view) {
@@ -96,9 +96,9 @@ public class Player_Select extends ActionBarActivity {
         boolean on = ((ToggleButton) view).isChecked();
 
         if (on) {
-            player5_AI=false;
-        } else {
             player5_AI=true;
+        } else {
+            player5_AI=false;
         }
     }
 
