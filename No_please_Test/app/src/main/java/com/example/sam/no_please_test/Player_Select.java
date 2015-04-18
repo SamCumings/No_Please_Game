@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
+import android.widget.ToggleButton;
 
 
 public class Player_Select extends ActionBarActivity {
@@ -43,6 +44,63 @@ public class Player_Select extends ActionBarActivity {
     }
 
     int number_players=0;
+    boolean player1_AI=false;
+    boolean player2_AI=false;
+    boolean player3_AI=false;
+    boolean player4_AI=false;
+    boolean player5_AI=false;
+
+    //toggle buttons
+    public void onToggleClicked_1(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+            player1_AI=false;
+        } else {
+            player1_AI=true;
+        }
+    }
+    public void onToggleClicked_2(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+            player2_AI=false;
+        } else {
+            player2_AI=true;
+        }
+    }
+    public void onToggleClicked_3(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+            player3_AI=false;
+        } else {
+            player3_AI=true;
+        }
+    }
+    public void onToggleClicked_4(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+            player4_AI=false;
+        } else {
+            player4_AI=true;
+        }
+    }
+    public void onToggleClicked_5(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+            player5_AI=false;
+        } else {
+            player5_AI=true;
+        }
+    }
 
     //does the radio buttons
     public void onRadioButtonClicked(View view) {
@@ -141,10 +199,15 @@ public class Player_Select extends ActionBarActivity {
         Bundle bundle = new Bundle();
 
         bundle.putString("EXTRA_NUMBER_PLAYER_1_NAME", player_1_name);
+        bundle.putBoolean("EXTRA_NUMBER_PLAYER_1_AI",player1_AI);
         bundle.putString("EXTRA_NUMBER_PLAYER_2_NAME", player_2_name);
+        bundle.putBoolean("EXTRA_NUMBER_PLAYER_2_AI",player2_AI);
         bundle.putString("EXTRA_NUMBER_PLAYER_3_NAME", player_3_name);
+        bundle.putBoolean("EXTRA_NUMBER_PLAYER_3_AI",player3_AI);
         bundle.putString("EXTRA_NUMBER_PLAYER_4_NAME", player_4_name);
+        bundle.putBoolean("EXTRA_NUMBER_PLAYER_4_AI",player4_AI);
         bundle.putString("EXTRA_NUMBER_PLAYER_5_NAME", player_5_name);
+        bundle.putBoolean("EXTRA_NUMBER_PLAYER_5_AI",player5_AI);
 
         bundle.putInt("EXTRA_NUMBER_PLAYERS", number_players);
 

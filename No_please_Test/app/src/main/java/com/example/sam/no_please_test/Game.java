@@ -14,7 +14,7 @@ public class Game{
     Card end_card;
     Player[] Player_List;
 
-    public Game(int number_player, String player1, String player2, String player3, String player4, String player5){
+    public Game(int number_player, String player1, boolean player1_AI, String player2, boolean player2_AI, String player3, boolean player3_AI, String player4,boolean player4_AI, String player5, boolean player5_AI){
         number_players=number_player;
 
         Player_List = new Player[number_player];
@@ -23,14 +23,14 @@ public class Game{
 
 
         //for consistency Player number is going to be equal to it's array position (starting at zero)
-        Player_List[0] = new Player(player1, 0);
-        Player_List[1] = new Player(player2, 1);
-        Player_List[2] = new Player(player3, 2);
+        Player_List[0] = new Player(player1, 0, player1_AI);
+        Player_List[1] = new Player(player2, 1, player2_AI);
+        Player_List[2] = new Player(player3, 2, player3_AI);
         if(number_players >= 4) {
-            Player_List[3] = new Player(player4, 3);
+            Player_List[3] = new Player(player4, 3, player4_AI);
         }
         if(number_players == 5) {
-            Player_List[4] = new Player(player5, 4);
+            Player_List[4] = new Player(player5, 4, player5_AI);
         }
 
         end_card=new Card(-1);

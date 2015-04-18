@@ -92,10 +92,15 @@ public class go_to_game extends ActionBarActivity {
         Bundle bundle = getIntent().getExtras();
 
         String player_1_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_1_NAME");
+        boolean player1_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_1_AI");
         String player_2_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_2_NAME");
+        boolean player2_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_2_AI");
         String player_3_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_3_NAME");
+        boolean player3_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_3_AI");
         String player_4_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_4_NAME");
+        boolean player4_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_4_AI");
         String player_5_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_5_NAME");
+        boolean player5_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_5_AI");
 
         int number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
         setContentView(R.layout.activity_go_to_game);
@@ -117,7 +122,7 @@ public class go_to_game extends ActionBarActivity {
         player5.setText(String.valueOf(player_5_name));
 
         //game called
-        new_game = new Game (number_players,player_1_name,player_2_name,player_3_name,player_4_name,player_5_name);
+        new_game = new Game (number_players,player_1_name,player1_AI,player_2_name,player2_AI,player_3_name,player3_AI,player_4_name,player4_AI,player_5_name,player5_AI);
 
         //update function pretty much
         update(new_game);

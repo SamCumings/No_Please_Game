@@ -17,11 +17,11 @@ public class Player
     List<Card> Hand = new ArrayList<Card>();
     int handSize;
     int chipCount;
-    //enum playerType {HUMAN, AI};
+    boolean is_player_AI;
     int playerNumber;
     String playerName;
 
-    public Player( String name, int number ) {
+    public Player( String name, int number,boolean is_AI ) {
 
         handSize = 0;
 
@@ -29,6 +29,7 @@ public class Player
         //playerType type; //when do we assign this?
         playerName = name;
         playerNumber = number;
+        is_player_AI= is_AI;
 
     } //Player constructor
 
