@@ -56,6 +56,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sam.no_please_test.MainActivity" />
         </activity>
+        <activity android:name=".WaitScreen"/>
+        
     </application>
 
 </manifest>
