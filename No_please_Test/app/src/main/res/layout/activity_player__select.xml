@@ -59,8 +59,7 @@
         android:visibility="invisible"
         android:hint="@string/Player_1_Name"
         android:inputType="textPersonName"
-        android:textColor="#ff20a1ff"
-        android:textColorHint="#ff20a1ff" />
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player2_Name"
         android:layout_width="wrap_content"
@@ -68,8 +67,7 @@
         android:visibility="invisible"
         android:hint="@string/Player_2_Name"
         android:inputType="textPersonName"
-        android:textColor="#ff20a1ff"
-        android:textColorHint="#ff20a1ff" />
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player3_Name"
         android:layout_width="wrap_content"
@@ -77,8 +75,7 @@
         android:visibility="invisible"
         android:hint="@string/Player_3_Name"
         android:inputType="textPersonName"
-        android:textColor="#ff20a1ff"
-        android:textColorHint="#ff20a1ff" />
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player4_Name"
         android:layout_width="wrap_content"
@@ -86,8 +83,7 @@
         android:visibility="invisible"
         android:hint="@string/Player_4_Name"
         android:inputType="textPersonName"
-        android:textColor="#ff20a1ff"
-        android:textColorHint="#ff20a1ff" />
+        android:textColor="#ff20a1ff" />
     <EditText
         android:id="@+id/Player5_Name"
         android:layout_width="wrap_content"
@@ -95,8 +91,7 @@
         android:visibility="invisible"
         android:hint="@string/Player_5_Name"
         android:inputType="textPersonName"
-        android:textColor="#ff20a1ff"
-        android:textColorHint="#ff20a1ff" />
+        android:textColor="#ff20a1ff" />
 
     <Button
         android:id="@+id/button"
