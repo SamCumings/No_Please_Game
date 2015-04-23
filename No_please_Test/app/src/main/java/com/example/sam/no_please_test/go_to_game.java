@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -27,7 +25,10 @@ public class go_to_game extends ActionBarActivity {
         return text_hand;
     }
 
+
     public void update(Game new_game){
+
+
         TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
         current_card.setText(String.valueOf(new_game.current_card.getValue()));
 
@@ -36,6 +37,7 @@ public class go_to_game extends ActionBarActivity {
 
         TextView current_player_name = (TextView) this.findViewById(R.id.current_player_name);
         current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
+        current_player_name.setTextColor( -65281);
 
         TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
         current_player_tokens.setText(String.valueOf(new_game.Current_Player.chipCount));
@@ -49,13 +51,24 @@ public class go_to_game extends ActionBarActivity {
         TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
         player_3_cards.setText((hand_list_to_string(new_game.Player_List[2].Hand)));
 
+        TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
+        player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
+
+        TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
+        player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
+
+        ImageView Player_4_icon = (ImageView)findViewById(R.id.Player_4_icon);
+        Player_4_icon.setVisibility(View.INVISIBLE);
+
+        ImageView Player_5_icon = (ImageView)findViewById(R.id.Player_5_icon);
+        Player_5_icon.setVisibility(View.INVISIBLE);
+
         if(new_game.number_players>3) {
-            TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
-            player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
+            Player_4_icon.setVisibility(View.VISIBLE);
         }
+
         if(new_game.number_players>4){
-            TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
-            player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
+            Player_5_icon.setVisibility(View.VISIBLE);
         }
         if (!new_game.Current_Player.enoughTokens()) {
             View button = findViewById(R.id.pass_button);
@@ -98,8 +111,8 @@ public class go_to_game extends ActionBarActivity {
         setContentView(R.layout.activity_go_to_game);
 
         //displays the number of players
-        TextView textView = (TextView) this.findViewById(R.id.game_screen_title);
-        textView.setText(String.valueOf(number_players));
+        //TextView textView = (TextView) this.findViewById(R.id.game_screen_title);
+        //textView.setText(String.valueOf(number_players));
 
         TextView player1 = (TextView) this.findViewById(R.id.Player1);
         player1.setText(String.valueOf(player_1_name));
@@ -123,6 +136,7 @@ public class go_to_game extends ActionBarActivity {
 
         //update function pretty much
         update(new_game);
+
     }
 
     //menu stuff
@@ -189,36 +203,29 @@ public class go_to_game extends ActionBarActivity {
     //should go to score screen activity
     public void score_screen(View view){
         //goes to next screen in response to button press
+        //TextView number_players = (TextView) findViewById(R.id.game_screen_title);
+       // int num_players = Integer.parseInt(number_players.getText().toString());
+            TextView player_5_cards = (TextView) findViewById(R.id.Player4_cards);
+            String player_5_cards_string = player_5_cards.getText().toString();
 
-        TextView number_players = (TextView) findViewById(R.id.game_screen_title);
-        int num_players = Integer.parseInt(number_players.getText().toString());
-
-        TextView player_1_cards = (TextView) findViewById(R.id.Player1_cards);
-        String player_1_cards_string = player_1_cards.getText().toString();
-
-        TextView player_2_cards = (TextView) findViewById(R.id.Player2_cards);
-        String player_2_cards_string = player_2_cards.getText().toString();
-
-        TextView player_3_cards = (TextView) findViewById(R.id.Player3_cards);
-        String player_3_cards_string = player_3_cards.getText().toString();
-
-        String player_4_cards_string;
-        String player_5_cards_string;
-        //if (num_players >= 4) {
             TextView player_4_cards = (TextView) findViewById(R.id.Player4_cards);
-            player_4_cards_string = player_4_cards.getText().toString();
+            String player_4_cards_string = player_4_cards.getText().toString();
 
-            //if (num_players == 5) {
-                TextView player_5_cards = (TextView) findViewById(R.id.Player5_cards);
-                player_5_cards_string = player_5_cards.getText().toString();
-            //}
-        //}
+            TextView player_1_cards = (TextView) findViewById(R.id.Player1_cards);
+            String player_1_cards_string = player_1_cards.getText().toString();
+
+            TextView player_2_cards = (TextView) findViewById(R.id.Player2_cards);
+            String player_2_cards_string = player_2_cards.getText().toString();
+
+            TextView player_3_cards = (TextView) findViewById(R.id.Player3_cards);
+            String player_3_cards_string = player_3_cards.getText().toString();
+
         //to do pass player information to score screen
         Intent intent = new Intent(this, score_screen.class);
 
         Bundle scores = new Bundle();
 
-        scores.putInt("number_of_players", num_players);
+        //scores.putInt("number_of_players", num_players);
         scores.putString("player_1_score", player_1_cards_string);
         scores.putString("player_2_score", player_2_cards_string);
         scores.putString("player_3_score", player_3_cards_string);

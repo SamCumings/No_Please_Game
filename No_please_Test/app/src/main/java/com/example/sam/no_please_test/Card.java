@@ -1,6 +1,7 @@
 
 package com.example.sam.no_please_test;
 
+import android.graphics.Bitmap;
 //
 // Created by Kym on 3/7/15.
 //
@@ -8,6 +9,7 @@ package com.example.sam.no_please_test;
 public class Card implements Comparable
 {
     private int value;
+    private Bitmap bmp;
     public int numChips;
 
     public Card(int newValue)
@@ -19,11 +21,6 @@ public class Card implements Comparable
     public int getValue()
     {
         return value;
-    }
-
-    public int getNumChips()
-    {
-        return numChips;
     }
 
     void incrementChips()

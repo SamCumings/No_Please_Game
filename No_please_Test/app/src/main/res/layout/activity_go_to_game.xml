@@ -4,178 +4,270 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.sam.no_please_test.go_to_game"
-    android:background="@android:color/background_dark">
-
-    <TextView
-        android:id="@+id/game_screen_title"
-        android:text="Let&apos;s Play!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ff20a1ff" />
+    android:background="@android:color/background_dark"
+    android:weightSum="1">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="61dp"
+            android:id="@+id/Player_1_icon"
+            android:src="@mipmap/icon_1"
+            android:layout_alignParentTop="true" />
+
         <TextView
             android:id="@+id/Player1"
-            android:text="@string/hello_world"
+            android:text="@string/Player_1_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Player_1_icon"
+            android:layout_toEndOf="@+id/Player_1_icon"
+            android:textSize="20dp" />
+
         <TextView
-            android:layout_toRightOf="@+id/Player1"
             android:id="@+id/Player1_cards"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textSize="20dp"
+            android:layout_below="@+id/Player1"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="61dp"
+            android:id="@+id/Player_2_icon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/icon_2" />
+
         <TextView
             android:id="@+id/Player2"
-            android:text="@string/hello_world"
+            android:text="@string/Player_2_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Player_2_icon"
+            android:layout_toEndOf="@+id/Player_2_icon"
+            android:textSize="20dp" />
         <TextView
-            android:layout_toRightOf="@+id/Player2"
             android:id="@+id/Player2_cards"
-            android:text="@string/hello_world"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textSize="20dp"
+            android:layout_below="@+id/Player2"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="61dp"
+            android:id="@+id/Player_3_icon"
+            android:src="@mipmap/icon_3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
         <TextView
             android:id="@+id/Player3"
-            android:text="@string/hello_world"
+            android:text="@string/Player_3_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Player_3_icon"
+            android:layout_toEndOf="@+id/Player_3_icon"
+            android:textSize="20dp" />
         <TextView
-            android:layout_toRightOf="@+id/Player3"
             android:id="@+id/Player3_cards"
-            android:text="This is a really long test text that is only there to check to see how this handles wrapping replace soon"
+            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textSize="20dp"
+            android:layout_below="@+id/Player3"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="61dp"
+            android:id="@+id/Player_4_icon"
+            android:src="@mipmap/icon_4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
         <TextView
             android:id="@+id/Player4"
-            android:text="@string/empty_string"
+            android:text="@string/Player_4_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Player_4_icon"
+            android:layout_toEndOf="@+id/Player_4_icon"
+            android:textSize="20dp" />
         <TextView
-            android:layout_toRightOf="@+id/Player4"
             android:id="@+id/Player4_cards"
-            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textSize="20dp"
+            android:text="@string/empty_string"
+            android:layout_below="@+id/Player4"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.45">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="61dp"
+            android:id="@+id/Player_5_icon"
+            android:src="@mipmap/icon_5"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
         <TextView
             android:id="@+id/Player5"
-            android:text="@string/empty_string"
+            android:text="@string/Player_5_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Player_5_icon"
+            android:layout_toEndOf="@+id/Player_5_icon"
+            android:textSize="20dp" />
         <TextView
-            android:layout_toRightOf="@+id/Player5"
             android:id="@+id/Player5_cards"
-            android:text="@string/empty_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textSize="20dp"
+            android:text="@string/empty_string"
+            android:layout_below="@+id/Player5"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.58"
+        android:id="@+id/layout1">
 
         <TextView
             android:id="@+id/Current_Card_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current Card: "
-            android:textColor="#ff20a1ff" />
+            android:text="Card:"
+            android:textColor="#ff20a1ff"
+            android:layout_gravity="right"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentTop="true"
+            android:textSize="40dp" />
+
         <TextView
-            android:layout_toRightOf="@id/Current_Card_text"
             android:id="@+id/Current_Card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test: Current Card"
-            android:textColor="#ff20a1ff" />
+            android:text="Card"
+            android:textColor="#ff20a1ff"
+            android:textSize="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/Current_Card_text"
+            android:layout_toEndOf="@+id/Current_Card_text" />
+
         <TextView
-            android:layout_below="@id/Current_Card_text"
-            android:id="@+id/Current_Card_Chips_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Card Chips: "
-            android:textColor="#ff20a1ff" />
-        <TextView
-            android:layout_toRightOf="@id/Current_Card_Chips_text"
             android:id="@+id/Current_Card_Chips"
-            android:layout_below="@+id/Current_Card"
-            android:layout_width="wrap_content"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:text="Test: Current Card_Chips"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:layout_toRightOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/imageView3" />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/chips_icon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/textView9" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="59dp">
 
-    <TextView
-        android:id="@+id/Current_Player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Current Player"
-        android:textColor="#ff20a1ff" />
-    <TextView
-        android:id="@+id/current_player_name"
-        android:text="test: current player name"
+        <TextView
+            android:id="@+id/current_player_name"
+            android:text="test: current player name"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ff20a1ff" />
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff"
+            android:textSize="40dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/textView10" />
+        <TextView
+            android:id="@+id/current_player_chip_count"
+            android:text="test: current player chip count"
 
-    <TextView
-        android:id="@+id/Current_Player_Chips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Current Player Chips"
-        android:textColor="#ff20a1ff" />
-    <TextView
-        android:id="@+id/current_player_chip_count"
-        android:text="test: current player chip count"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/imageView2" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ff20a1ff" />
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/chips_icon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -200,15 +292,15 @@
             android:onClick="pass_button"
             android:background="#ff82ff43" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/score_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/score_screen"
+            android:onClick="score_screen"
+            android:background="#ff82ff43" />
 
-    <Button
-        android:id="@+id/score_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="@string/score_screen"
-        android:onClick="score_screen"
-        android:background="#ff82ff43" />
+    </RelativeLayout>
 
 </LinearLayout>
