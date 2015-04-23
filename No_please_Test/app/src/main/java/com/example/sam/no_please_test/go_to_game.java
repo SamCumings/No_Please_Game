@@ -179,6 +179,8 @@ public class go_to_game extends ActionBarActivity {
         Intent intent = new Intent(this, WaitScreen.class);
 
         test_card=new_game.take_card();
+
+        intent.putExtra("playerName", new_game.Current_Player.playerName);
         startActivity(intent);
         update(new_game);
 
