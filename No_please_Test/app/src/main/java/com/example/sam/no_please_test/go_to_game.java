@@ -16,6 +16,11 @@ import java.util.List;
 public class go_to_game extends ActionBarActivity {
     //handles issues of displaying the game
 
+    Game new_game;
+    Card test_card;
+    int number_players;
+    TextView current_card,current_card_chips,current_player_name,current_player_tokens,player_1_cards,player_2_cards,player_3_cards,player_4_cards,player_5_cards;
+
     public String hand_list_to_string(List<Card> hand){
         String text_hand = " ";
 
@@ -28,33 +33,33 @@ public class go_to_game extends ActionBarActivity {
     }
 
     public void update(Game new_game){
-        TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
+        current_card = (TextView) this.findViewById(R.id.Current_Card);
         current_card.setText(String.valueOf(new_game.current_card.getValue()));
 
-        TextView current_card_chips = (TextView) this.findViewById(R.id.Current_Card_Chips);
+        current_card_chips = (TextView) this.findViewById(R.id.Current_Card_Chips);
         current_card_chips.setText(String.valueOf(new_game.current_card.numChips));
 
-        TextView current_player_name = (TextView) this.findViewById(R.id.current_player_name);
+        current_player_name = (TextView) this.findViewById(R.id.current_player_name);
         current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
 
-        TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
+        current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
         current_player_tokens.setText(String.valueOf(new_game.Current_Player.chipCount));
 
-        TextView player_1_cards = (TextView) this.findViewById(R.id.Player1_cards);
+        player_1_cards = (TextView) this.findViewById(R.id.Player1_cards);
         player_1_cards.setText((hand_list_to_string(new_game.Player_List[0].Hand)));
 
-        TextView player_2_cards = (TextView) this.findViewById(R.id.Player2_cards);
+        player_2_cards = (TextView) this.findViewById(R.id.Player2_cards);
         player_2_cards.setText((hand_list_to_string(new_game.Player_List[1].Hand)));
 
-        TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
+        player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
         player_3_cards.setText((hand_list_to_string(new_game.Player_List[2].Hand)));
 
         if(new_game.number_players>3) {
-            TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
+            player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
             player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
         }
         if(new_game.number_players>4){
-            TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
+            player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
             player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
         }
         if (!new_game.Current_Player.enoughTokens()) {
@@ -76,8 +81,7 @@ public class go_to_game extends ActionBarActivity {
         }
     }
 
-    Game new_game;
-    Card test_card;
+
 
 
     @Override
@@ -89,17 +93,23 @@ public class go_to_game extends ActionBarActivity {
         Bundle bundle = getIntent().getExtras();
 
         String player_1_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_1_NAME");
-        String player_2_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_2_NAME");
-        String player_3_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_3_NAME");
-        String player_4_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_4_NAME");
-        String player_5_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_5_NAME");
+        boolean player1_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_1_AI");
 
-        int number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
+        String player_2_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_2_NAME");
+        boolean player2_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_2_AI");
+
+        String player_3_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_3_NAME");
+        boolean player3_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_3_AI");
+
+        String player_4_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_4_NAME");
+        boolean player4_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_4_AI");
+
+        String player_5_name = getIntent().getExtras().getString("EXTRA_NUMBER_PLAYER_5_NAME");
+        boolean player5_AI = getIntent().getExtras().getBoolean("EXTRA_NUMBER_PLAYER_5_AI");
+
+        number_players=bundle.getInt("EXTRA_NUMBER_PLAYERS",0);
         setContentView(R.layout.activity_go_to_game);
 
-        //displays the number of players
-        TextView textView = (TextView) this.findViewById(R.id.game_screen_title);
-        textView.setText(String.valueOf(number_players));
 
         TextView player1 = (TextView) this.findViewById(R.id.Player1);
         player1.setText(String.valueOf(player_1_name));
@@ -117,9 +127,7 @@ public class go_to_game extends ActionBarActivity {
         player5.setText(String.valueOf(player_5_name));
 
         //game called
-        new_game = new Game (number_players,player_1_name,player_2_name,player_3_name,player_4_name,player_5_name);
-
-        //hides unused textviews (if statements for players 4 and 5)
+        new_game = new Game (number_players,player_1_name,player1_AI,player_2_name,player2_AI,player_3_name,player3_AI,player_4_name,player4_AI,player_5_name,player5_AI);
 
         //update function pretty much
         update(new_game);
@@ -165,7 +173,8 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted player
             //check if the pass button should be greyed out for this player
 
-        test_card=new_game.take_card();
+        new_game.take_card();
+
         update(new_game);
 
 
@@ -189,9 +198,6 @@ public class go_to_game extends ActionBarActivity {
     //should go to score screen activity
     public void score_screen(View view){
         //goes to next screen in response to button press
-
-        TextView number_players = (TextView) findViewById(R.id.game_screen_title);
-        int num_players = Integer.parseInt(number_players.getText().toString());
 
         TextView player_1_cards = (TextView) findViewById(R.id.Player1_cards);
         String player_1_cards_string = player_1_cards.getText().toString();
@@ -218,7 +224,7 @@ public class go_to_game extends ActionBarActivity {
 
         Bundle scores = new Bundle();
 
-        scores.putInt("number_of_players", num_players);
+        scores.putInt("number_of_players", number_players);
         scores.putString("player_1_score", player_1_cards_string);
         scores.putString("player_2_score", player_2_cards_string);
         scores.putString("player_3_score", player_3_cards_string);

@@ -52,46 +52,113 @@
             android:textColor="#ff20a1ff" />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/Player1_Name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:hint="@string/Player_1_Name"
-        android:inputType="textPersonName"
-        android:textColor="#ff20a1ff" />
-    <EditText
-        android:id="@+id/Player2_Name"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Player1_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:hint="@string/Player_1_Name"
+            android:inputType="textPersonName"
+            android:textColor="#ff20a1ff" />
+        <ToggleButton
+            android:id="@+id/toggle_AI_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="AI"
+            android:textOff="Human"
+            android:onClick="onToggleClicked_1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:hint="@string/Player_2_Name"
-        android:inputType="textPersonName"
-        android:textColor="#ff20a1ff" />
-    <EditText
-        android:id="@+id/Player3_Name"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Player2_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:hint="@string/Player_2_Name"
+            android:inputType="textPersonName"
+            android:textColor="#ff20a1ff" />
+        <ToggleButton
+            android:id="@+id/toggle_AI_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="AI"
+            android:textOff="Human"
+            android:onClick="onToggleClicked_2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:hint="@string/Player_3_Name"
-        android:inputType="textPersonName"
-        android:textColor="#ff20a1ff" />
-    <EditText
-        android:id="@+id/Player4_Name"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Player3_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:hint="@string/Player_3_Name"
+            android:inputType="textPersonName"
+            android:textColor="#ff20a1ff" />
+        <ToggleButton
+            android:id="@+id/toggle_AI_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="AI"
+            android:textOff="Human"
+            android:onClick="onToggleClicked_3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:hint="@string/Player_4_Name"
-        android:inputType="textPersonName"
-        android:textColor="#ff20a1ff" />
-    <EditText
-        android:id="@+id/Player5_Name"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Player4_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:hint="@string/Player_4_Name"
+            android:inputType="textPersonName"
+            android:textColor="#ff20a1ff" />
+        <ToggleButton
+            android:id="@+id/toggle_AI_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="AI"
+            android:textOff="Human"
+            android:onClick="onToggleClicked_4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:hint="@string/Player_5_Name"
-        android:inputType="textPersonName"
-        android:textColor="#ff20a1ff" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Player5_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:hint="@string/Player_5_Name"
+            android:inputType="textPersonName"
+            android:textColor="#ff20a1ff" />
+        <ToggleButton
+            android:id="@+id/toggle_AI_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="AI"
+            android:textOff="Human"
+            android:onClick="onToggleClicked_5"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
