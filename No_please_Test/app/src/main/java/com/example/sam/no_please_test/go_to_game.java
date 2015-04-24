@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -197,42 +198,35 @@ public class go_to_game extends ActionBarActivity {
     public void score_screen(View view){
         //goes to next screen in response to button press
 
-        //TextView number_players = (TextView) findViewById(R.id.game_screen_title);
-        //int num_players = Integer.parseInt(number_players.getText().toString());
-
-        TextView player_1_cards = (TextView) findViewById(R.id.Player1_cards);
-        String player_1_cards_string = player_1_cards.getText().toString();
-
-        TextView player_2_cards = (TextView) findViewById(R.id.Player2_cards);
-        String player_2_cards_string = player_2_cards.getText().toString();
-
-        TextView player_3_cards = (TextView) findViewById(R.id.Player3_cards);
-        String player_3_cards_string = player_3_cards.getText().toString();
-
-        String player_4_cards_string;
-        String player_5_cards_string;
-        //if (num_players >= 4) {
-            TextView player_4_cards = (TextView) findViewById(R.id.Player4_cards);
-            player_4_cards_string = player_4_cards.getText().toString();
-
-            //if (num_players == 5) {
-                TextView player_5_cards = (TextView) findViewById(R.id.Player5_cards);
-                player_5_cards_string = player_5_cards.getText().toString();
-            //}
-        //}
-        //to do pass player information to score screen
         Intent intent = new Intent(this, score_screen.class);
 
-        Bundle scores = new Bundle();
+        Bundle scores_bundle = new Bundle();
 
-        scores.putInt("number_of_players", number_players);
-        scores.putString("player_1_score", player_1_cards_string);
-        scores.putString("player_2_score", player_2_cards_string);
-        scores.putString("player_3_score", player_3_cards_string);
-        scores.putString("player_4_score", player_4_cards_string);
-        scores.putString("player_5_score", player_5_cards_string);
+        //put number of players
+        scores_bundle.putInt("number_of_players", new_game.number_players);
+        //put player 1 cards and chips
+        scores_bundle.putIntArray("player_1_cards", new_game.Player_List[0].getCardArray());
+        scores_bundle.putInt("player_1_chips", new_game.Player_List[0].chipCount);
+        //put player 2 cards and chips
+        scores_bundle.putIntArray("player_2_cards", new_game.Player_List[1].getCardArray());
+        scores_bundle.putInt("player_2_chips", new_game.Player_List[1].chipCount);
+        //put player 3 cards and chips
+        scores_bundle.putIntArray("player_3_cards", new_game.Player_List[2].getCardArray());
+        scores_bundle.putInt("player_3_chips", new_game.Player_List[2].chipCount);
 
-        intent.putExtras(scores); //pass scores to intent
+        if( new_game.number_players >= 4) {
+            //put player 1 cards and chips
+            scores_bundle.putIntArray("player_4_cards", new_game.Player_List[3].getCardArray());
+            scores_bundle.putInt("player_4_chips", new_game.Player_List[3].chipCount);
+
+            if (new_game.number_players == 5) {
+                //put player 1 cards and chips
+                scores_bundle.putIntArray("player_5_cards", new_game.Player_List[4].getCardArray());
+                scores_bundle.putInt("player_5_chips", new_game.Player_List[4].chipCount);
+            }
+        }
+
+        intent.putExtras(scores_bundle); //pass scores to intent
         startActivity(intent); //start score screen
     }
 }

@@ -61,6 +61,21 @@ public class Player
             return true;
         }
 
-
     } // enoughTokens function
+
+    public int getChipCount() {
+        return this.chipCount;
+    } //getChipCount
+
+    int[] getCardArray() { //to pass array of cards in bundle to score
+
+        int a[] = new int[33];
+        int i = 0;
+        for( Card card: this.Hand ) {
+            a[i] = card.getValue();
+            i++;
+        }
+        return a;
+    } //getCardArray
+
 }
