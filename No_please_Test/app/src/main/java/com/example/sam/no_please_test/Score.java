@@ -5,6 +5,7 @@ package com.example.sam.no_please_test;
  */
 public class Score {
 
+    //We shouldn't really need this anymore
     int[] StringToArray(String stringToBeParsed) {
 
         String[] parseString = stringToBeParsed.split(" ");
@@ -17,7 +18,7 @@ public class Score {
         return newArray;
     }
 
-    int calculateScore(int[] scoreArray) {
+    int calculateScore(int[] scoreArray, int numChips) {
         if(scoreArray.length == 0) {
             return 0;
         }
@@ -32,7 +33,7 @@ public class Score {
                 }
             }
 
-            return totalScore;
+            return totalScore-numChips;
         }
     }
 

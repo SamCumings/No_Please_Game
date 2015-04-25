@@ -74,14 +74,16 @@
             android:text="Player 4 score: "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:visibility="invisible" />
         <TextView
             android:layout_toRightOf="@+id/Player4"
             android:id="@+id/Player4_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -92,14 +94,16 @@
             android:text="Player 5 score: "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:visibility="invisible" />
         <TextView
             android:layout_toRightOf="@+id/Player5"
             android:id="@+id/Player5_score"
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:visibility="invisible" />
     </RelativeLayout>
     
     <RelativeLayout
