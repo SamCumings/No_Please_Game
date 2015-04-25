@@ -44,6 +44,7 @@ public class Game{
     public Card draw_card(){
         return game_deck.popCard();
     }
+
     public void go_next_player(){
         Current_Player=Player_List[(Current_Player.playerNumber+1)%number_players];
         if (Current_Player.is_player_AI){
@@ -55,7 +56,7 @@ public class Game{
         if (!check_pass_card()){
             take_card();
         }
-        if (decision>20){
+        if (decision>10){
             pass_card();
         }
         else {

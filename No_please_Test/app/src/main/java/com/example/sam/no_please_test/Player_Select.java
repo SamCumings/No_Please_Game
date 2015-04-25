@@ -51,16 +51,7 @@ public class Player_Select extends ActionBarActivity {
     boolean player5_AI=false;
 
     //toggle buttons
-    public void onToggleClicked_1(View view) {
-        // Is the toggle on?
-        boolean on = ((ToggleButton) view).isChecked();
 
-        if (on) {
-            player1_AI=true;
-        } else {
-            player1_AI=false;
-        }
-    }
     public void onToggleClicked_2(View view) {
         // Is the toggle on?
         boolean on = ((ToggleButton) view).isChecked();
