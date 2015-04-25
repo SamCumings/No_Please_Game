@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import java.util.Arrays;
 
 
 public class score_screen extends ActionBarActivity {
@@ -24,36 +25,50 @@ public class score_screen extends ActionBarActivity {
 
         setContentView(R.layout.activity_score_screen); //set up activity view to edit
 
-        int ply1score = scoreCalc.calculateScore(rcvScores.getIntArray("player_1_cards"), rcvScores.getInt("player_1_chips"));
+        int[] scoreList = new int[5];
+
+        scoreList[0] = scoreCalc.calculateScore(rcvScores.getIntArray("player_1_cards"), rcvScores.getInt("player_1_chips"));
         TextView player_1_score_view = (TextView) this.findViewById(R.id.Player1_score);
-        player_1_score_view.setText(String.valueOf(ply1score));
+        player_1_score_view.setText(String.valueOf(scoreList[0]));
 
-        int ply2score = scoreCalc.calculateScore(rcvScores.getIntArray("player_2_cards"), rcvScores.getInt("player_2_chips"));
+        scoreList[1] = scoreCalc.calculateScore(rcvScores.getIntArray("player_2_cards"), rcvScores.getInt("player_2_chips"));
         TextView player_2_score_view = (TextView) this.findViewById(R.id.Player2_score);
-        player_2_score_view.setText(String.valueOf(ply2score));
+        player_2_score_view.setText(String.valueOf(scoreList[1]));
 
-        int ply3score = scoreCalc.calculateScore(rcvScores.getIntArray("player_3_cards"), rcvScores.getInt("player_3_chips"));
+        scoreList[2] = scoreCalc.calculateScore(rcvScores.getIntArray("player_3_cards"), rcvScores.getInt("player_3_chips"));
         TextView player_3_score_view = (TextView) this.findViewById(R.id.Player3_score);
-        player_3_score_view.setText(String.valueOf(ply3score));
+        player_3_score_view.setText(String.valueOf(scoreList[2]));
 
         if( number_players >= 4) {
-            int ply4score = scoreCalc.calculateScore(rcvScores.getIntArray("player_4_cards"), rcvScores.getInt("player_4_chips"));
+            scoreList[3] = scoreCalc.calculateScore(rcvScores.getIntArray("player_4_cards"), rcvScores.getInt("player_4_chips"));
             TextView player_4_score_view = (TextView) this.findViewById(R.id.Player4_score);
             TextView ply4 = (TextView) this.findViewById(R.id.Player4);
             ply4.setVisibility(View.VISIBLE);
             player_4_score_view.setVisibility(View.VISIBLE);
-            player_4_score_view.setText(String.valueOf(ply4score));
+            player_4_score_view.setText(String.valueOf(scoreList[3]));
 
             if( number_players == 5) {
-                int ply5score = scoreCalc.calculateScore(rcvScores.getIntArray("player_5_cards"), rcvScores.getInt("player_5_chips"));
+                scoreList[4] = scoreCalc.calculateScore(rcvScores.getIntArray("player_5_cards"), rcvScores.getInt("player_5_chips"));
                 TextView player_5_score_view = (TextView) this.findViewById(R.id.Player5_score);
                 TextView ply5 = (TextView) this.findViewById(R.id.Player5);
                 ply5.setVisibility(View.VISIBLE);
                 player_5_score_view.setVisibility(View.VISIBLE);
-                player_5_score_view.setText(String.valueOf(ply5score));
+                player_5_score_view.setText(String.valueOf(scoreList[4]));
 
             }
         }
+
+        int winner = 07734;
+        int tmp = 1000;
+        for (int i = 0; i < number_players; i++) {
+            if( scoreList[i] < tmp) {
+                winner = i+1;
+                tmp = scoreList[i];
+            }
+        }
+
+        TextView winnerName = (TextView) this.findViewById(R.id.winner_name);
+        winnerName.setText("Player " + String.valueOf(winner));
 
     }
 
