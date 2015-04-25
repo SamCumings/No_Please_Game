@@ -51,16 +51,23 @@ public class Game{
             AI_turn();
         }
     }
+    public int Card_Value_Calculate(Card card){
+        int value;
+
+            value=card.getValue()-card.numChips;
+
+        return value;
+    }
     public void AI_turn(){
-        int decision=random_num.nextInt()%100;
-        if (!check_pass_card()){
-            take_card();
+        int decision=random_num.nextInt()%1000;
+        if(current_card.getValue()==-1){
+            go_next_player();
         }
-        if (decision>10){
-            pass_card();
+        if ((!check_pass_card())||(decision == 1)/*||Card_Value_Calculate(current_card)<0*/){
+            take_card();
         }
         else {
-            take_card();
+            pass_card();
         }
     }
     public Card take_card(){
