@@ -56,14 +56,27 @@ public class Game{
 
             value=card.getValue()-card.numChips;
 
+            if(value<0){
+                value=0;
+            }
+
         return value;
     }
     public void AI_turn(){
-        int decision=random_num.nextInt()%1000;
+        int decision;
+
+        if(Card_Value_Calculate(current_card)==0){
+            decision=0;
+        }else
+        {
+            decision= random_num.nextInt()%Card_Value_Calculate(current_card);
+        }
+
+
         if(current_card.getValue()==-1){
             go_next_player();
         }
-        if ((!check_pass_card())||(decision == 1)/*||Card_Value_Calculate(current_card)<0*/){
+        if ((!check_pass_card())||(decision == 0)){
             take_card();
         }
         else {

@@ -5,7 +5,7 @@ package com.example.sam.no_please_test;
  */
 public class Score {
 
-    //We shouldn't really need this anymore
+    //We shouldn't really this string to array function anymore
     int[] StringToArray(String stringToBeParsed) {
 
         String[] parseString = stringToBeParsed.split(" ");
