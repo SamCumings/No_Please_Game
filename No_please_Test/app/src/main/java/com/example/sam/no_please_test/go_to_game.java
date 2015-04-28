@@ -175,17 +175,14 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted player
             //check if the pass button should be greyed out for this player
 
-
         Intent intent = new Intent(this, WaitScreen.class);
 
         test_card=new_game.take_card();
 
         intent.putExtra("playerName", new_game.Current_Player.playerName);
         startActivity(intent);
+
         update(new_game);
-
-
-
     }
     //called when pass button pressed
     public void pass_button(View view){
@@ -198,7 +195,14 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted character
             //check if the pass button should be greyed out
             //change number of chips to the new player's chips
+
+        Intent intent = new Intent(this, WaitScreen.class);
+
         new_game.pass_card();
+
+        intent.putExtra("playerName", new_game.Current_Player.playerName);
+        startActivity(intent);
+
         update(new_game);
     }
 

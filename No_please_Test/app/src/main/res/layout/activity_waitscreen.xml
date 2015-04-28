@@ -34,8 +34,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Press the back button to continue..."
+        android:text="Press the back to game button to continue..."
         android:id="@+id/textView14"
+        android:paddingBottom="20dp"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Game"
+        android:onClick="back_to_game"
+        android:id="@+id/backToGame"
+        android:nestedScrollingEnabled="false"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff82ff43" />
 
 </LinearLayout>
