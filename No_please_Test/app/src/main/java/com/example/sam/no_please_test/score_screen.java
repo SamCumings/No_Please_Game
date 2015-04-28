@@ -20,6 +20,7 @@ public class score_screen extends ActionBarActivity {
         Bundle rcvScores = getIntent().getExtras(); //gets score strings that were passed
 
         int number_players = rcvScores.getInt("number_of_players");
+        String[] player_names = rcvScores.getStringArray("player_names");
 
         Score scoreCalc = new Score();
 
@@ -30,20 +31,28 @@ public class score_screen extends ActionBarActivity {
         scoreList[0] = scoreCalc.calculateScore(rcvScores.getIntArray("player_1_cards"), rcvScores.getInt("player_1_chips"));
         TextView player_1_score_view = (TextView) this.findViewById(R.id.Player1_score);
         player_1_score_view.setText(String.valueOf(scoreList[0]));
+        TextView player_1_name_view = (TextView) this.findViewById(R.id.Player1);
+        player_1_name_view.setText(String.valueOf(player_names[0]) + "'s score: ");
 
         scoreList[1] = scoreCalc.calculateScore(rcvScores.getIntArray("player_2_cards"), rcvScores.getInt("player_2_chips"));
         TextView player_2_score_view = (TextView) this.findViewById(R.id.Player2_score);
         player_2_score_view.setText(String.valueOf(scoreList[1]));
+        TextView player_2_name_view = (TextView) this.findViewById(R.id.Player2);
+        player_2_name_view.setText(String.valueOf(player_names[1]) + "'s score: ");
 
         scoreList[2] = scoreCalc.calculateScore(rcvScores.getIntArray("player_3_cards"), rcvScores.getInt("player_3_chips"));
         TextView player_3_score_view = (TextView) this.findViewById(R.id.Player3_score);
         player_3_score_view.setText(String.valueOf(scoreList[2]));
+        TextView player_3_name_view = (TextView) this.findViewById(R.id.Player3);
+        player_3_name_view.setText(String.valueOf(player_names[2]) + "'s score: ");
 
         if( number_players >= 4) {
             scoreList[3] = scoreCalc.calculateScore(rcvScores.getIntArray("player_4_cards"), rcvScores.getInt("player_4_chips"));
             TextView player_4_score_view = (TextView) this.findViewById(R.id.Player4_score);
             TextView ply4 = (TextView) this.findViewById(R.id.Player4);
             ply4.setVisibility(View.VISIBLE);
+            TextView player_4_name_view = (TextView) this.findViewById(R.id.Player4);
+            player_4_name_view.setText(String.valueOf(player_names[3]) + "'s score: ");
             player_4_score_view.setVisibility(View.VISIBLE);
             player_4_score_view.setText(String.valueOf(scoreList[3]));
 
@@ -52,6 +61,8 @@ public class score_screen extends ActionBarActivity {
                 TextView player_5_score_view = (TextView) this.findViewById(R.id.Player5_score);
                 TextView ply5 = (TextView) this.findViewById(R.id.Player5);
                 ply5.setVisibility(View.VISIBLE);
+                TextView player_5_name_view = (TextView) this.findViewById(R.id.Player5);
+                player_5_name_view.setText(String.valueOf(player_names[4]) + "'s score: ");
                 player_5_score_view.setVisibility(View.VISIBLE);
                 player_5_score_view.setText(String.valueOf(scoreList[4]));
 
@@ -62,13 +73,13 @@ public class score_screen extends ActionBarActivity {
         int tmp = 1000;
         for (int i = 0; i < number_players; i++) {
             if( scoreList[i] < tmp) {
-                winner = i+1;
+                winner = i;
                 tmp = scoreList[i];
             }
         }
 
         TextView winnerName = (TextView) this.findViewById(R.id.winner_name);
-        winnerName.setText("Player " + String.valueOf(winner));
+        winnerName.setText(String.valueOf(player_names[winner]));
 
     }
 

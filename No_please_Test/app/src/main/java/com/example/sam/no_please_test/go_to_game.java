@@ -204,6 +204,14 @@ public class go_to_game extends ActionBarActivity {
 
         //put number of players
         scores_bundle.putInt("number_of_players", new_game.number_players);
+
+        //put players in string array
+        String[] playerNameArray = new String[5];
+        for (int i = 0; i < number_players; i++) {
+            playerNameArray[i] = new_game.Player_List[i].playerName;
+        }
+        scores_bundle.putStringArray("player_names", playerNameArray);
+
         //put player 1 cards and chips
         scores_bundle.putIntArray("player_1_cards", new_game.Player_List[0].getCardArray());
         scores_bundle.putInt("player_1_chips", new_game.Player_List[0].chipCount);
