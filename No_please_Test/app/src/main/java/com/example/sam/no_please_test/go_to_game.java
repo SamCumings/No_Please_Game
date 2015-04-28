@@ -1,11 +1,14 @@
 package com.example.sam.no_please_test;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -78,6 +81,7 @@ public class go_to_game extends ActionBarActivity {
     }
 
     Game new_game;
+
     Card test_card;
     int number_players;
 
@@ -86,6 +90,12 @@ public class go_to_game extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
+
+        //FragmentManager FM = getFragmentManager();
+        //FragmentTransaction FT = FM.beginTransaction();
+        //WaitScreenFragment waitScreenFragment = new WaitScreenFragment();
+        //FT.add(R.id., waitScreenFragment);
+        //FT.commit();
 
         //this gets the number of players (doesn't get anything else yet that's what the commented out code is for).
         Bundle bundle = getIntent().getExtras();
@@ -173,11 +183,14 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted player
             //check if the pass button should be greyed out for this player
 
+        Intent intent = new Intent(this, WaitScreen.class);
+
         test_card=new_game.take_card();
+
+        intent.putExtra("playerName", new_game.Current_Player.playerName);
+        startActivity(intent);
+
         update(new_game);
-
-
-
     }
     //called when pass button pressed
     public void pass_button(View view){
@@ -190,7 +203,14 @@ public class go_to_game extends ActionBarActivity {
             //change current highlighted character
             //check if the pass button should be greyed out
             //change number of chips to the new player's chips
+
+        Intent intent = new Intent(this, WaitScreen.class);
+
         new_game.pass_card();
+
+        intent.putExtra("playerName", new_game.Current_Player.playerName);
+        startActivity(intent);
+
         update(new_game);
     }
 

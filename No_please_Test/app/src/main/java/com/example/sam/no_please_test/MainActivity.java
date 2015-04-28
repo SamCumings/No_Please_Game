@@ -8,15 +8,13 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.EditText;
 
- //test commit by sam to make a new branch
-
 public class MainActivity extends ActionBarActivity {
 
     //creates the layout for main activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         setContentView(R.layout.activity_main);
     }
 
