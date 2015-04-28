@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#000000">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,24 +12,26 @@
         android:text="Waitscreen..."
         android:textSize="50dp"
         android:id="@+id/textView12"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff20a1ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pass to"
+        android:textSize="25dp"
+        android:id="@+id/textView13"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff20a1ff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/playerName"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pass to the next player"
-        android:textSize="25dp"
-        android:paddingTop="100dp"
-        android:id="@+id/textView13"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff20a1ff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,8 +39,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Press the back to game button to continue..."
         android:id="@+id/textView14"
+        android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff20a1ff" />
 
     <Button
         android:layout_width="wrap_content"
