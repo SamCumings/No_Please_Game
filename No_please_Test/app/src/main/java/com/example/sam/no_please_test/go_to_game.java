@@ -33,7 +33,8 @@ public class go_to_game extends ActionBarActivity {
 
     public void update(Game new_game){
         TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
-        current_card.setText(String.valueOf(new_game.current_card.getValue()));
+
+
 
         TextView current_card_chips = (TextView) this.findViewById(R.id.Current_Card_Chips);
         current_card_chips.setText(String.valueOf(new_game.current_card.numChips));
@@ -69,6 +70,11 @@ public class go_to_game extends ActionBarActivity {
             button.setVisibility(View.VISIBLE);
         }
         if(new_game.current_card.getValue()==-1){
+            current_card.setText("GAME OVER");
+
+            View current_card_text = findViewById(R.id.Current_Card_text);
+            current_card_text.setVisibility(View.INVISIBLE);
+
             View score_button = findViewById(R.id.score_button);
             score_button.setVisibility(View.VISIBLE);
 
