@@ -6,13 +6,7 @@
     tools:context="com.example.sam.no_please_test.score_screen"
     android:background="@android:color/background_dark">
 
-    <TextView
-        android:text="Test: Score Screen Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ff20a1ff" />
-
-    <RelativeLayout
+  <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -105,33 +99,51 @@
             android:textColor="#ff20a1ff"
             android:visibility="invisible" />
     </RelativeLayout>
-    
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/winner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Winner: "
-                android:textColor="#ff20a1ff" />
-            <TextView
-                android:id="@+id/winner_name"
-                android:layout_below="@id/winner"
-                android:layout_centerHorizontal="true"
-                android:text="@string/hello_world"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ff20a1ff" />
-    </RelativeLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_menu"
-        android:onClick="activity_main"
-        android:background="#ff82ff43"
-        android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Winner: "
+            android:textColor="#ff20a1ff"
+            android:gravity="center_vertical"
+            android:textSize="40dp"
+            />
+        <TextView
+            android:id="@+id/winner_name"
+            android:layout_below="@id/winner"
+            android:layout_centerHorizontal="true"
+            android:text="@string/hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff20a1ff"
+            android:textSize="40dp"/>
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_menu"
+            android:onClick="activity_main"
+            android:background="#ff82ff43"
+            android:layout_gravity="center_horizontal|bottom"
+            />
+
+        </LinearLayout>
+
 
 </LinearLayout>
