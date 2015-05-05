@@ -67,6 +67,13 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView14" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,8 +92,20 @@
             android:layout_height="wrap_content"
             android:textOn="AI"
             android:textOff="Human"
-            android:onClick="onToggleClicked_2"/>
+            android:onClick="onToggleClicked_2"
+            android:background="#ff82ff43"
+            android:checked="false"
+            android:visibility="invisible" />
+
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView9" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,9 +124,18 @@
             android:layout_height="wrap_content"
             android:textOn="AI"
             android:textOff="Human"
-            android:onClick="onToggleClicked_3"/>
+            android:onClick="onToggleClicked_3"
+            android:background="#ff82ff43"
+            android:visibility="invisible" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView12" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -127,9 +155,18 @@
             android:layout_height="wrap_content"
             android:textOn="AI"
             android:textOff="Human"
-            android:onClick="onToggleClicked_4"/>
+            android:onClick="onToggleClicked_4"
+            android:background="#ff82ff43"
+            android:visibility="invisible" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView13" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -150,7 +187,9 @@
             android:layout_height="wrap_content"
             android:textOn="AI"
             android:textOff="Human"
-            android:onClick="onToggleClicked_5"/>
+            android:onClick="onToggleClicked_5"
+            android:background="#ff82ff43"
+            android:visibility="invisible" />
 
     </LinearLayout>
 

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -53,22 +54,39 @@ public class go_to_game extends ActionBarActivity {
         TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
         player_3_cards.setText((hand_list_to_string(new_game.Player_List[2].Hand)));
 
-        if(new_game.number_players>3) {
+        ImageView Player_4_icon = (ImageView)findViewById(R.id.Player_4_icon);
+        Player_4_icon.setVisibility(View.INVISIBLE);
+
+        ImageView Player_5_icon = (ImageView)findViewById(R.id.Player_5_icon);
+        Player_5_icon.setVisibility(View.INVISIBLE);
+
+        if(new_game.number_players>3)
+        {
             TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
             player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
+            Player_4_icon.setVisibility(View.VISIBLE);
         }
-        if(new_game.number_players>4){
+
+        if(new_game.number_players>4)
+        {
             TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
             player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
+            Player_5_icon.setVisibility(View.VISIBLE);
         }
-        if (!new_game.Current_Player.enoughTokens()) {
+
+        if (!new_game.Current_Player.enoughTokens())
+        {
             View button = findViewById(R.id.pass_button);
             button.setVisibility(View.INVISIBLE);
-        } else {
+        }
+        else
+        {
             View button = findViewById(R.id.pass_button);
             button.setVisibility(View.VISIBLE);
         }
-        if(new_game.current_card.getValue()==-1){
+
+        if(new_game.current_card.getValue()==-1)
+        {
             View score_button = findViewById(R.id.score_button);
             score_button.setVisibility(View.VISIBLE);
 

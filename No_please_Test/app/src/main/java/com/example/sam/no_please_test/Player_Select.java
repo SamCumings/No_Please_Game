@@ -101,9 +101,23 @@ public class Player_Select extends ActionBarActivity {
         View button = findViewById(R.id.button);
         button.setVisibility(View.VISIBLE);
 
+        View toggle_player2 = findViewById(R.id.toggle_AI_2);
+        toggle_player2.setVisibility(View.INVISIBLE);
+
+        View toggle_player3 = findViewById(R.id.toggle_AI_3);
+        toggle_player3.setVisibility(View.INVISIBLE);
+
+        View toggle_player4 = findViewById(R.id.toggle_AI_4);
+        toggle_player4.setVisibility(View.INVISIBLE);
+
+        View toggle_player5 = findViewById(R.id.toggle_AI_5);
+        toggle_player5.setVisibility(View.INVISIBLE);
+
+
         // Check which radio button was clicked
         // reveals the appropriate text fields depending on the players selected. (that's what the invisible vs. visible means)
         switch(view.getId()) {
+
             case R.id.radio_three_players:
                 if (checked) {
                     number_players = 3;
@@ -113,15 +127,19 @@ public class Player_Select extends ActionBarActivity {
 
                     View player2 = findViewById(R.id.Player2_Name);
                     player2.setVisibility(View.VISIBLE);
+                    toggle_player2.setVisibility(View.VISIBLE);
 
                     View player3 = findViewById(R.id.Player3_Name);
                     player3.setVisibility(View.VISIBLE);
+                    toggle_player3.setVisibility(View.VISIBLE);
 
                     View player4 = findViewById(R.id.Player4_Name);
                     player4.setVisibility(View.INVISIBLE);
+                    toggle_player4.setVisibility(View.INVISIBLE);
 
                     View player5 = findViewById(R.id.Player5_Name);
                     player5.setVisibility(View.INVISIBLE);
+                    toggle_player5.setVisibility(View.INVISIBLE);
                 }
                     break;
             case R.id.radio_four_players:
@@ -132,15 +150,19 @@ public class Player_Select extends ActionBarActivity {
 
                     View player2 = findViewById(R.id.Player2_Name);
                     player2.setVisibility(View.VISIBLE);
+                    toggle_player2.setVisibility(View.VISIBLE);
 
                     View player3 = findViewById(R.id.Player3_Name);
                     player3.setVisibility(View.VISIBLE);
+                    toggle_player3.setVisibility(View.VISIBLE);
 
                     View player4 = findViewById(R.id.Player4_Name);
                     player4.setVisibility(View.VISIBLE);
+                    toggle_player4.setVisibility(View.VISIBLE);
 
                     View player5 = findViewById(R.id.Player5_Name);
                     player5.setVisibility(View.INVISIBLE);
+                    toggle_player5.setVisibility(View.INVISIBLE);
                 }
                     break;
             case R.id.radio_five_players:
@@ -151,15 +173,19 @@ public class Player_Select extends ActionBarActivity {
 
                     View player2 = findViewById(R.id.Player2_Name);
                     player2.setVisibility(View.VISIBLE);
+                    toggle_player2.setVisibility(View.VISIBLE);
 
                     View player3 = findViewById(R.id.Player3_Name);
                     player3.setVisibility(View.VISIBLE);
+                    toggle_player3.setVisibility(View.VISIBLE);
 
                     View player4 = findViewById(R.id.Player4_Name);
                     player4.setVisibility(View.VISIBLE);
+                    toggle_player4.setVisibility(View.VISIBLE);
 
                     View player5 = findViewById(R.id.Player5_Name);
                     player5.setVisibility(View.VISIBLE);
+                    toggle_player5.setVisibility(View.VISIBLE);
                 }
                     break;
         }
