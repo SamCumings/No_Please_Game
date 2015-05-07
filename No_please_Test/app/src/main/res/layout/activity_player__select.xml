@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="@string/Player_2_Name"
+            android:hint="Player 2"
             android:inputType="textPersonName"
             android:textColor="#ff20a1ff" />
         <ToggleButton
@@ -118,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="@string/Player_3_Name"
+            android:hint="Player 3"
             android:inputType="textPersonName"
             android:textColor="#ff20a1ff" />
         <ToggleButton
@@ -151,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="@string/Player_4_Name"
+            android:hint="Player 4"
             android:inputType="textPersonName"
             android:textColor="#ff20a1ff" />
         <ToggleButton
@@ -185,7 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="@string/Player_5_Name"
+            android:hint="Player 5"
             android:inputType="textPersonName"
             android:textColor="#ff20a1ff" />
         <ToggleButton
