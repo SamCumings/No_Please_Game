@@ -61,8 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="Player 1"
-            android:textColorHint="#ff20a1ff"
+            android:hint="@string/hint1"
+            android:textColorHint="#5c20a1ff"
             android:inputType="textPersonName"
             android:textColor="#ff20a1ff" />
 
@@ -84,9 +84,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="Player 2"
+            android:hint="@string/hint2"
             android:inputType="textPersonName"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textColorHint="#5c20a1ff" />
         <ToggleButton
             android:id="@+id/toggle_AI_2"
             android:layout_width="wrap_content"
@@ -118,9 +119,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="Player 3"
+            android:hint="@string/hint3"
             android:inputType="textPersonName"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textColorHint="#5c20a1ff" />
         <ToggleButton
             android:id="@+id/toggle_AI_3"
             android:layout_width="wrap_content"
@@ -151,9 +153,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="Player 4"
+            android:hint="@string/hint4"
             android:inputType="textPersonName"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textColorHint="#5c20a1ff" />
         <ToggleButton
             android:id="@+id/toggle_AI_4"
             android:layout_width="wrap_content"
@@ -185,9 +188,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:hint="Player 5"
+            android:hint="@string/hint5"
             android:inputType="textPersonName"
-            android:textColor="#ff20a1ff" />
+            android:textColor="#ff20a1ff"
+            android:textColorHint="#5c20a1ff" />
         <ToggleButton
             android:id="@+id/toggle_AI_5"
             android:layout_width="wrap_content"

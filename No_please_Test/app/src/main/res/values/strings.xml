@@ -3,6 +3,11 @@
 
     <string name="app_name">No Please</string>
     <!-- <string name="hello_world">Hello world!</string> -->
+    <string name="hint1"><i>Player 1 Name</i></string>
+    <string name="hint2"><i>Player 2 Name</i></string>
+    <string name="hint3"><i>Player 3 Name</i></string>
+    <string name="hint4"><i>Player 4 Name</i></string>
+    <string name="hint5"><i>Player 5 Name</i></string>
     <string name="action_settings">Settings</string>
     <string name="Tutorial">Tutorial</string>
     <string name="main_menu">Main Menu</string>
