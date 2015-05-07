@@ -3,6 +3,7 @@ package com.example.sam.no_please_test;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,7 +33,7 @@ public class go_to_game extends ActionBarActivity {
         return text_hand;
     }
 
-    public void update(Game new_game){
+    public void update(Game new_game) {
         TextView current_card = (TextView) this.findViewById(R.id.Current_Card);
         current_card.setText(String.valueOf(new_game.current_card.getValue()));
 
@@ -40,6 +42,7 @@ public class go_to_game extends ActionBarActivity {
 
         TextView current_player_name = (TextView) this.findViewById(R.id.current_player_name);
         current_player_name.setText(String.valueOf(new_game.Current_Player.playerName));
+        current_player_name.setTextColor(Color.MAGENTA);
 
         TextView current_player_tokens = (TextView) this.findViewById(R.id.current_player_chip_count);
         current_player_tokens.setText(String.valueOf(new_game.Current_Player.chipCount));
@@ -53,13 +56,22 @@ public class go_to_game extends ActionBarActivity {
         TextView player_3_cards = (TextView) this.findViewById(R.id.Player3_cards);
         player_3_cards.setText((hand_list_to_string(new_game.Player_List[2].Hand)));
 
-        if(new_game.number_players>3) {
+        ImageView player4_Icon = (ImageView) this.findViewById(R.id.Player_4_icon);
+        player4_Icon.setVisibility(View.INVISIBLE);
+
+        ImageView player5_Icon = (ImageView) this.findViewById(R.id.Player_5_icon);
+        player5_Icon.setVisibility(View.INVISIBLE);
+
+
+        if (new_game.number_players > 3) {
             TextView player_4_cards = (TextView) this.findViewById(R.id.Player4_cards);
             player_4_cards.setText((hand_list_to_string(new_game.Player_List[3].Hand)));
+            player4_Icon.setVisibility(View.VISIBLE);
         }
-        if(new_game.number_players>4){
+        if (new_game.number_players > 4) {
             TextView player_5_cards = (TextView) this.findViewById(R.id.Player5_cards);
             player_5_cards.setText((hand_list_to_string(new_game.Player_List[4].Hand)));
+            player5_Icon.setVisibility(View.VISIBLE);
         }
         if (!new_game.Current_Player.enoughTokens()) {
             View button = findViewById(R.id.pass_button);
@@ -68,9 +80,11 @@ public class go_to_game extends ActionBarActivity {
             View button = findViewById(R.id.pass_button);
             button.setVisibility(View.VISIBLE);
         }
-        if(new_game.current_card.getValue()==-1){
+        if (new_game.current_card.getValue() == -1) {
             View score_button = findViewById(R.id.score_button);
             score_button.setVisibility(View.VISIBLE);
+
+            current_card.setText(" ");
 
             View pass_button = findViewById(R.id.pass_button);
             pass_button.setVisibility(View.INVISIBLE);
@@ -78,8 +92,8 @@ public class go_to_game extends ActionBarActivity {
             View take_button = findViewById(R.id.take_button);
             take_button.setVisibility(View.INVISIBLE);
         }
-    }
 
+    }
     Game new_game;
 
     Card test_card;
