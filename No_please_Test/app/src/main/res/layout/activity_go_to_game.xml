@@ -95,8 +95,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#6f0d070c">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="51dp"
